@@ -88,7 +88,7 @@ jobs:
         run: |
           sleep 20
           bad=0
-          for path in "" data.json styles.css app.js links.js $(cat _site/links.txt); do
+          for path in "" data.json styles.css app.js links.js hero.webp $(cat _site/links.txt); do
             code=000
             for attempt in 1 2 3 4 5; do
               code=$(curl -s -o /dev/null -w '%{http_code}' "${SITE%/}/$path")
@@ -97,7 +97,7 @@ jobs:
             done
             [ "$code" = 200 ] || { echo "::error::$code ${SITE%/}/$path"; bad=$((bad+1)); }
           done
-          total=$(( $(wc -l < _site/links.txt) + 5 ))
+          total=$(( $(wc -l < _site/links.txt) + 6 ))
           echo "$((total-bad))/$total pages load"
           [ "$bad" -eq 0 ]
 

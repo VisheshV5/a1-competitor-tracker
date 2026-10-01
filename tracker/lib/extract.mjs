@@ -2,7 +2,7 @@
 import crypto from 'node:crypto';
 import { INTEGRATIONS, INDUSTRIES, CAPABILITIES, LANGUAGES } from './vocab.mjs';
 
-const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–', hellip: '…', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', middot: '·', bull: '•', trade: '™', reg: '®', copy: '©' };
+const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–', hellip: '…', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', middot: '·', bull: '•', trade: '™', reg: '®', copy: '©', times: '×', rarr: '→', larr: '←', check: '✓', shy: '' };
 
 export function decode(s) {
   return s

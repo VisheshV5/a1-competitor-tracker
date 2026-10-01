@@ -13,7 +13,8 @@ import { ROOT, DATA, loadConfig, allTargets, readJSON, writeJSON } from './lib/s
 import { checkPage } from './lib/check.mjs';
 import { build } from './build.mjs';
 import { alert } from './lib/alert.mjs';
-import { findSnapshot, snapshotPage } from './lib/snapshot-page.mjs';
+import { findSnapshot, changePage } from './lib/change-page.mjs';
+import { stamp } from '../public/links.js';
 
 const PORT = Number(process.argv[2] ?? process.env.PORT ?? 4321);
 const INTERVAL = Number(process.env.WATCH_INTERVAL ?? 120) * 1000;
@@ -113,12 +114,16 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'content-type': 'application/json' });
     return res.end(JSON.stringify(scan));
   }
-  const snap = url.pathname.match(/^\/snapshot\/([\w-]+)\/([\w-]+)\/(\d{14})$/);
-  if (snap) {
-    const found = findSnapshot(...snap.slice(1));
-    const html = found && snapshotPage(found, competitorName[snap[1]] ?? snap[1]);
+  const change = url.pathname.match(/^\/change\/([\w-]+)\/([\w-]+)\/(\d{14})$/);
+  if (change) {
+    const [, cid, pid, at] = change;
+    const events = readJSON(path.join(PUBLIC, 'data.json'), { events: [] }).events
+      .filter((e) => e.competitor === cid && e.pageId === pid && stamp(e.at) === at);
+    const prev = events[0] && findSnapshot(cid, pid, stamp(events[0].prevAt));
+    const next = events[0] && findSnapshot(cid, pid, at);
+    const html = prev && next && changePage({ events, prev, next, competitor: competitorName[cid] ?? cid, homeHref: '/' });
     res.writeHead(html ? 200 : 404, { 'content-type': 'text/html; charset=utf-8' });
-    return res.end(html ?? 'Snapshot not found');
+    return res.end(html || 'Change not found');
   }
 
   const file = path.normalize(path.join(PUBLIC, url.pathname === '/' ? 'index.html' : url.pathname));

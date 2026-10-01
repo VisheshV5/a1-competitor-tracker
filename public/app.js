@@ -1,4 +1,4 @@
-import { localSnapshotHref } from './links.js';
+import { changeHref } from './links.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s = '') => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -262,10 +262,6 @@ function renderFeed() {
 
 function eventCard(e) {
   const c = byId[e.competitor];
-  // Before/After open our own stored copy of the exact text that was compared. Every link is
-  // self-hosted and verified at publish time; the single-file export has no pages to link to.
-  const versionLink = (which, label) => SERVED
-    ? `<a href="${localSnapshotHref(e, which, PAGES)}" target="_blank" rel="noopener">${label} ↗</a>` : '';
   const hasDiff = (e.added?.length || e.removed?.length || e.before);
   const diff = !hasDiff ? '' : `<div class="diff" hidden>${
     e.before !== undefined ? `<div class="diff__ba"><div class="diff__line diff__line--del"><span>Before</span>${esc(e.before)}</div><div class="diff__line diff__line--add"><span>After</span>${esc(e.after)}</div></div>` :
@@ -283,10 +279,8 @@ function eventCard(e) {
       <h4 class="event__title">${esc(e.title)}</h4>
       ${e.a1.length ? `<div class="a1">${e.a1.map((n) => `<span class="a1__note">${esc(n)}</span>`).join('')}</div>` : ''}
       <div class="event__foot">
-        ${hasDiff ? `<button class="linkbtn" data-toggle>What changed</button>` : ''}
+        ${SERVED ? `<a class="linkbtn" href="${changeHref(e, PAGES)}" target="_blank" rel="noopener">See the change ↗</a>` : hasDiff ? `<button class="linkbtn" data-toggle>What changed</button>` : ''}
         <a href="${esc(e.url)}" target="_blank" rel="noopener">Live page ↗</a>
-        ${versionLink('before', `Before`)}
-        ${versionLink('after', 'After')}
       </div>
       ${diff}
     </div>

@@ -64,8 +64,9 @@ export function build() {
 function writeStandalone(out) {
   const pub = (f) => fs.readFileSync(path.join(ROOT, 'public', f), 'utf8');
   const json = JSON.stringify(out).replace(/</g, '\\u003c');
+  const heroImage = fs.readFileSync(path.join(ROOT, 'public', 'hero.webp')).toString('base64');
   const html = pub('index.html')
-    .replace('<link rel="stylesheet" href="styles.css">', () => `<style>${pub('styles.css')}</style>`)
+    .replace('<link rel="stylesheet" href="styles.css">', () => `<style>${pub('styles.css').replace('url(hero.webp)', `url(data:image/webp;base64,${heroImage})`)}</style>`)
     .replace('<script src="app.js" type="module"></script>', () => `<script>window.__DATA__ = ${json};</script>\n<script type="module">${
       pub('app.js').replace(/^import .* from '\.\/links\.js';$/m, pub('links.js').replace(/^export /gm, ''))}</script>`);
   fs.writeFileSync(path.join(ROOT, 'dashboard.html'), html);
