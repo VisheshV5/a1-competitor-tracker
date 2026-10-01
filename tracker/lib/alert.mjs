@@ -1,4 +1,4 @@
-// Notifications for newly detected changes. Only high-signal or A1-relevant events alert.
+// Notifications for newly detected changes. Only high-signal or a1mobile-relevant events alert.
 //   SLACK_WEBHOOK_URL=https://hooks.slack.com/...   post to Slack
 //   NOTIFY=1                                        macOS desktop notification (local server only)
 //   DASHBOARD_URL=https://...                       link included in Slack messages

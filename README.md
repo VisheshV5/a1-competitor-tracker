@@ -44,7 +44,7 @@ npm run check-links  # verify every Internet Archive link on the dashboard opens
 - **Every page is re-checked every ~2 minutes** (`WATCH_INTERVAL=120`, in seconds). Checks are staggered so overall it's about one request every 2.6 seconds, and no site gets hit hard.
 - **When content changes, the page is fetched again 20 seconds later.** The change is recorded only if it held. This filters out rotating testimonials and A/B tests.
 - **New changes appear on any open dashboard immediately** over Server-Sent Events: a toast, a NEW badge, and a count in the tab title, with no refresh needed. Changes detected while you were away are marked NEW on your next visit.
-- **Alerts (optional):** `NOTIFY=1` sends a macOS notification. `SLACK_WEBHOOK_URL=…` posts high-signal and A1-relevant changes to Slack.
+- **Alerts (optional):** `NOTIFY=1` sends a macOS notification. `SLACK_WEBHOOK_URL=…` posts high-signal and a1mobile-relevant changes to Slack.
 
 Worst-case latency from a competitor publishing to it showing on the dashboard is about 2½ minutes: up to one check interval plus the 20-second confirmation. Competitors don't push their changes anywhere, so polling is the limit. Lowering `WATCH_INTERVAL` shortens the delay at the cost of more requests.
 
@@ -74,7 +74,7 @@ One-time setup: push the repo, then go to **Settings → Pages → Source** and 
    - **Messaging**: copy rewrites and new sections
 
    Each event gets a significance score. Numbers that change on every visit (for example "12,481 calls answered") are ignored.
-4. **A1 relevance.** Events are flagged when a competitor adds a capability a1mobile doesn't list (`self.capabilities` in `competitors.json`), lists a monthly price below $99, moves into an a1mobile vertical, or starts describing itself as a carrier or AI-native line.
+4. **a1mobile relevance.** Events are flagged when a competitor adds a capability a1mobile doesn't list (`self.capabilities` in `competitors.json`), lists a monthly price below $99, moves into an a1mobile vertical, or starts describing itself as a carrier or AI-native line.
 5. **Rebuild.** Events are always recomputed from the stored snapshots, so improving the keyword lists or diff rules re-scores the whole history.
 
 ## Caveats

@@ -76,15 +76,15 @@ const rank = (e) => ({ high: 0, medium: 1, low: 2 })[e.significance];
 function relevance(e, selfCaps) {
   const notes = [];
   const gaps = (e.added ?? []).filter((x) => CAP_NAMES.has(x) && !selfCaps.has(x));
-  if (gaps.length) notes.push(`A1 gap: ${gaps.join(', ')}`);
+  if (gaps.length) notes.push(`a1mobile gap: ${gaps.join(', ')}`);
   if (e.category === 'Pricing') {
     const cheap = (e.added ?? []).filter((x) => x.endsWith('/mo') && parseFloat(x.slice(1)) < 99);
     if (cheap.length) notes.push(`Undercuts $99: ${cheap.join(', ')}`);
   }
   if (e.category === 'Industry' && (e.added ?? []).some((x) => ['Restaurants', 'Cafes', 'Salons', 'Hotels', 'Fitness', 'Home services'].includes(x)))
-    notes.push('Moving into an A1 vertical');
+    notes.push('Moving into an a1mobile vertical');
   if (e.category === 'Positioning' && /carrier|phone (line|system|number)|one bill|ai-native/i.test(`${e.after ?? ''}`))
-    notes.push('Positioning overlaps A1 (“AI-native line”)');
+    notes.push('Positioning overlaps a1mobile (“AI-native line”)');
   return notes;
 }
 
