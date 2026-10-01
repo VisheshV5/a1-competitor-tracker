@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "tracker", "runtimeExecutable": "node", "runtimeArgs": ["tracker/serve.mjs", "4321"], "port": 4321 }
+    { "name": "tracker", "runtimeExecutable": "node", "runtimeArgs": ["tracker/serve.mjs", "4321"], "port": 4321 },
+    { "name": "preview", "runtimeExecutable": "env", "runtimeArgs": ["WATCH=0", "node", "tracker/serve.mjs", "4322"], "port": 4322 }
   ]
 }

@@ -2,8 +2,8 @@
 // what gets tested is exactly what gets rendered.
 const stamp = (iso) => iso.replace(/[-:T]/g, '').slice(0, 14);
 
-// Only link to the Internet Archive for versions that came from it; versions we captured
-// ourselves are not in the archive under that timestamp, so they open from our local store.
+// Internet Archive links exist only for versions that came from it; versions we captured
+// ourselves aren't in the archive under that timestamp.
 export function archiveLinks(e) {
   const out = [];
   if (e.prevSource === 'wayback') out.push({ kind: 'before', ts: stamp(e.prevAt), href: `https://web.archive.org/web/${stamp(e.prevAt)}/${e.url}` });

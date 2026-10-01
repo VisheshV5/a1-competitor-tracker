@@ -251,9 +251,13 @@ function renderFeed() {
 function eventCard(e) {
   const c = byId[e.competitor];
   const archive = Object.fromEntries(archiveLinks(e).map((l) => [l.kind, l.href]));
-  const versionLink = (which, label) => archive[which]
-    ? `<a href="${esc(archive[which])}" target="_blank" rel="noopener" title="Internet Archive capture">${label} ↗</a>`
-    : SERVED ? `<a href="${localSnapshotHref(e, which, PAGES)}" target="_blank" rel="noopener" title="Our stored copy of this version">${label} ↗</a>` : '';
+  // Before/After open our stored copy: exactly the text that was compared, and it never breaks.
+  // The Internet Archive can substitute a nearby capture, so it's offered separately for the visual page.
+  const versionLink = (which, label) => SERVED
+    ? `<a href="${localSnapshotHref(e, which, PAGES)}" target="_blank" rel="noopener" title="The exact version that was compared">${label} ↗</a>`
+    : archive[which] ? `<a href="${esc(archive[which])}" target="_blank" rel="noopener">${label} ↗</a>` : '';
+  const archived = SERVED && (archive.before ?? archive.after)
+    ? `<a href="${esc(archive.before ?? archive.after)}" target="_blank" rel="noopener" title="How the page looked, from the Internet Archive">Archived page ↗</a>` : '';
   const hasDiff = (e.added?.length || e.removed?.length || e.before);
   const diff = !hasDiff ? '' : `<div class="diff" hidden>${
     e.before !== undefined ? `<div class="diff__ba"><div class="diff__line diff__line--del"><span>Before</span>${esc(e.before)}</div><div class="diff__line diff__line--add"><span>After</span>${esc(e.after)}</div></div>` :
@@ -275,6 +279,7 @@ function eventCard(e) {
         <a href="${esc(e.url)}" target="_blank" rel="noopener">Live page ↗</a>
         ${versionLink('before', `Before`)}
         ${versionLink('after', 'After')}
+        ${archived}
       </div>
       ${diff}
     </div>

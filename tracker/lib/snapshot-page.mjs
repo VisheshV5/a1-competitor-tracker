@@ -1,5 +1,4 @@
-// Renders one stored snapshot as a readable page, for "Before"/"After" links on versions
-// we captured ourselves (those aren't in the Internet Archive).
+// Renders one stored snapshot as a readable page: the exact text a change was computed from.
 import { listSnapshots, toStamp } from './store.mjs';
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -14,6 +13,6 @@ export function snapshotPage(snap, competitorName) {
 .k{font:12px/16px ui-monospace,Menlo,monospace;letter-spacing:.076em;text-transform:uppercase;color:#7c7a73}h1{font-weight:500;letter-spacing:-.02em;margin:8px 0}
 .card{background:#fff;border-radius:22px;padding:24px;margin-top:24px}p{margin:0 0 10px;overflow-wrap:anywhere}a{color:#468bf1}</style>
 <main><p class="k">${esc(competitorName)} · stored snapshot · ${esc(new Date(snap.capturedAt).toUTCString())}</p><h1>${esc(snap.title)}</h1>
-<p><a href="${esc(snap.url)}" target="_blank" rel="noopener">${esc(snap.url)} ↗</a></p>${snap.description ? `<p>${esc(snap.description)}</p>` : ''}
+<p><a href="${esc(snap.url)}" target="_blank" rel="noopener">Live page ↗</a>${snap.source === 'wayback' ? ` · <a href="https://web.archive.org/web/${esc(toStamp(snap.capturedAt))}/${esc(snap.url)}" target="_blank" rel="noopener">How it looked (Internet Archive) ↗</a>` : ''}</p>${snap.description ? `<p>${esc(snap.description)}</p>` : ''}
 <div class="card">${snap.blocks.map((b) => `<p>${esc(b)}</p>`).join('')}</div></main>`;
 }

@@ -1,5 +1,5 @@
 // Builds the static site published to GitHub Pages: the dashboard, its data, and a readable
-// page for every self-captured version a change card links to.
+// page for every stored version a change card links to.
 //   node tracker/site.mjs [outDir=_site]
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,8 +18,8 @@ const data = readJSON(path.join(OUT, 'data.json'));
 const names = Object.fromEntries(data.profiles.map((p) => [p.id, p.name]));
 const wanted = new Set();
 for (const e of data.events) {
-  if (e.prevSource !== 'wayback') wanted.add(`${e.competitor}/${e.pageId}/${toStamp(e.prevAt)}`);
-  if (e.source !== 'wayback') wanted.add(`${e.competitor}/${e.pageId}/${toStamp(e.at)}`);
+  wanted.add(`${e.competitor}/${e.pageId}/${toStamp(e.prevAt)}`);
+  wanted.add(`${e.competitor}/${e.pageId}/${toStamp(e.at)}`);
 }
 let n = 0;
 for (const key of wanted) {
