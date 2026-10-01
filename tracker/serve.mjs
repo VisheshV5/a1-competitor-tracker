@@ -41,7 +41,7 @@ function rebuild(reason) {
   const { list } = build();
   const fresh = list.filter((e) => !knownIds.has(e.id));
   knownIds = new Set(list.map((e) => e.id));
-  if (fresh.length) {
+  if (fresh.length && fresh.length <= 25) {
     console.log(`▲ ${fresh.length} new change event(s) — ${reason}`);
     broadcast('changes', { ids: fresh.map((e) => e.id), reason });
     alert(fresh);

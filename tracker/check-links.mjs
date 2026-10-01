@@ -10,7 +10,8 @@ const links = new Map();
 for (const e of data.events) for (const l of archiveLinks(e)) links.set(l.href, { ...l, event: e });
 
 console.log(`Checking ${links.size} unique archive links…`);
-const results = await pool([...links.values()], 3, async (l) => {
+const results = await pool([...links.values()], 1, async (l) => {
+  await new Promise((r) => setTimeout(r, 1500)); // stay under the archive's rate limit
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
       const res = await fetch(l.href, { redirect: 'follow', signal: AbortSignal.timeout(60000) });

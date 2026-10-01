@@ -34,7 +34,7 @@ export function diffSnapshots(prev, next, page) {
   // fact-level diffs against it would be noise, so record one redesign event instead.
   const ratio = Math.min(prev.blocks.length, next.blocks.length) / Math.max(prev.blocks.length, next.blocks.length);
   if (ratio < 0.45) {
-    push('Messaging', 'medium', `${labelFor(page)} redesigned — ${prev.blocks.length} → ${next.blocks.length} content blocks`, {
+    push('Messaging', 'medium', `${labelFor(page)} redesigned`, {
       added: next.blocks.filter((b) => b.length >= 18).slice(0, 12), removed: [], rebuilt: true });
     return events;
   }
@@ -89,10 +89,13 @@ export function diffSnapshots(prev, next, page) {
     const fallback = page.type === 'docs' ? 'Docs' : page.type === 'pricing' ? 'Pricing' : page.type === 'integrations' ? 'Integration' : 'Messaging';
     // Pages with a clear purpose keep their category; marketing pages are classified by what was added.
     const category = fallback !== 'Messaging' ? fallback : topicOf(addedHeads.length ? addedHeads : added, fallback);
-    const what = addedHeads.length
-      ? `New sections: ${list(addedHeads.map((h) => `“${h.slice(0, 60)}”`), 3)}`
-      : volume > 2500 ? 'Major copy rewrite' : `${added.length} block${added.length === 1 ? '' : 's'} added, ${removed.length} removed`;
-    push(category, sig, `${labelFor(page)} updated — ${what}`, { added: added.slice(0, 12), removed: removed.slice(0, 12), volume });
+    const where = labelFor(page).toLowerCase();
+    const lines = (n, verb) => (n ? `${n} line${n === 1 ? '' : 's'} ${verb}` : '');
+    const title = addedHeads.length
+      ? `New on the ${where}: ${list(addedHeads.map((h) => `“${h.slice(0, 60)}”`), 3)}`
+      : volume > 2500 ? `Major rewrite of the ${where}`
+      : `Copy edits on the ${where} (${[lines(added.length, 'added'), lines(removed.length, 'removed')].filter(Boolean).join(', ')})`;
+    push(category, sig, title, { added: added.slice(0, 12), removed: removed.slice(0, 12), volume });
   }
   return events;
 }

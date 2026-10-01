@@ -19,7 +19,7 @@ let PAGES = false;  // GitHub Pages: poll data.json for new publishes
 const freshIds = new Set();                       // arrived over the live stream this session
 const lastVisit = store.get('last-visit') ?? '';  // anything detected after this is “new since last visit”
 const isNew = (e) => freshIds.has(e.id) || (lastVisit && e.at > lastVisit);
-const state = { q: '', comp: '', range: 0, a1: false, high: false, cats: new Set(), month: '', limit: 60 };
+const state = { q: '', comp: '', range: 0, a1: false, minor: false, cats: new Set(), month: '', limit: 60 };
 
 async function load() {
   // dashboard.html has the data inlined; index.html (served) fetches it fresh.
@@ -67,7 +67,8 @@ function pollPages() {
     try { next = await fetch(`data.json?t=${Date.now()}`, { cache: 'no-store' }).then((r) => r.json()); } catch { return; }
     if (next.generatedAt === data.generatedAt) return;
     const before = new Set(data.events.map((e) => e.id));
-    const ids = next.events.filter((e) => !before.has(e.id)).map((e) => e.id);
+    let ids = next.events.filter((e) => !before.has(e.id)).map((e) => e.id);
+    if (ids.length > 25) ids = []; // history was re-scored after a rules update, not new competitor activity
     ids.forEach((id) => freshIds.add(id));
     await load();
     if (ids.length) {
@@ -88,7 +89,7 @@ function renderLive() {
     el.innerHTML = `<span class="live__dot"></span>Auto-updating · every page checked every ~${data.checkEveryMin} min · data published ${mins < 1 ? 'just now' : `${mins} min ago`}`;
     return;
   }
-  if (!LIVE) return;
+  if (!LIVE || !live.pages) { el.innerHTML = ''; return; }
   if (live.down) { el.innerHTML = '<span class="live__dot is-off"></span>Reconnecting…'; return; }
   const ago = live.lastCheckAt ? Math.max(0, Math.round((Date.now() - new Date(live.lastCheckAt)) / 1000)) : null;
   el.innerHTML = `<span class="live__dot"></span>Live · ${live.pages} pages, each every ~${Math.round(live.interval / 60)} min${ago !== null ? ` · last check ${ago}s ago` : ''}`;
@@ -108,11 +109,8 @@ function toast(evs) {
 /* ---------- header ---------- */
 function renderChrome() {
   const comps = data.profiles.filter((p) => !p.isSelf);
-  const last30 = data.events.filter((e) => daysAgo(e.at) <= 30);
-  const high = data.events.filter((e) => e.significance === 'high' && daysAgo(e.at) <= 90);
-  const pages = comps.reduce((n, p) => n + p.pages.length, 0);
   const lastCheck = data.profiles.flatMap((p) => p.pages.map((pg) => pg.lastChecked)).filter(Boolean).sort().at(-1);
-  const latest = data.events[0];
+  const latest = data.events.find((e) => e.significance !== 'low') ?? data.events[0];
   const newCount = data.events.filter(isNew).length;
   $('#announce').innerHTML = newCount
     ? `<b>${newCount} new</b> since your last visit — latest: ${esc(byId[latest.competitor]?.name)}, ${esc(latest.title.slice(0, 60))}`
@@ -120,11 +118,11 @@ function renderChrome() {
     ? `Latest: <b>${esc(byId[latest.competitor]?.name)}</b> — ${esc(latest.title.slice(0, 80))}`
     : 'No changes detected yet — the next scan will compare against today’s baseline.';
   $('#kpis').innerHTML = [
-    [comps.length, 'Competitors tracked'],
-    [pages, 'Pages monitored'],
-    [last30.length, 'Changes · last 30 days'],
-    [high.length, 'High-signal · last 90 days'],
-  ].map(([v, l]) => `<div class="kpi"><div class="kpi__value">${v}</div><div class="kpi__label">${l}</div></div>`).join('');
+    [comps.length, 'competitors watched'],
+    [data.events.filter((e) => daysAgo(e.at) <= 7 && e.significance !== 'low').length, 'changes this week'],
+    [data.events.filter((e) => daysAgo(e.at) <= 30 && e.significance === 'high').length, 'big changes this month'],
+    [data.events.filter((e) => daysAgo(e.at) <= 30 && e.a1.length).length, 'relevant to a1mobile this month'],
+  ].map(([v, l]) => `<div class="kpi"><span class="kpi__value">${v}</span><span class="kpi__label">${l}</span></div>`).join('');
   $('#generated').textContent = `Last scan ${lastCheck ? fmtDate(lastCheck) : '—'} · built ${fmtDate(data.generatedAt)}`;
 }
 
@@ -175,6 +173,7 @@ function renderHeat() {
     state.range = 0;
     $('#f-comp').value = state.comp; $('#f-range').value = '0';
     renderHeat(); renderFeed();
+    showTab('changes');
     $('#filters').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 }
@@ -200,7 +199,7 @@ function renderFilters() {
   bind('#f-comp', 'comp', (t) => t.value);
   bind('#f-range', 'range', (t) => Number(t.value));
   bind('#f-a1', 'a1', (t) => t.checked);
-  bind('#f-high', 'high', (t) => t.checked);
+  bind('#f-minor', 'minor', (t) => t.checked);
 }
 
 function filtered() {
@@ -209,25 +208,41 @@ function filtered() {
     (!state.month || e.at.startsWith(state.month)) &&
     (!state.range || daysAgo(e.at) <= state.range) &&
     (!state.a1 || e.a1.length) &&
-    (!state.high || e.significance === 'high') &&
+    (state.minor || e.significance !== 'low') &&
     (!state.cats.size || state.cats.has(e.category)) &&
     (!state.q || [e.title, byId[e.competitor]?.name, e.category, ...(e.added ?? []), ...(e.a1 ?? [])].join(' ').toLowerCase().includes(state.q)));
 }
 
 /* ---------- feed ---------- */
+const dayLabel = (iso) => {
+  const d = new Date(iso), t = new Date();
+  const days = Math.round((new Date(t.toDateString()) - new Date(d.toDateString())) / 864e5);
+  if (days === 0) return 'Today';
+  if (days === 1) return 'Yesterday';
+  return d.toLocaleDateString('en-US', { weekday: days < 7 ? 'long' : undefined, month: 'long', day: 'numeric', year: d.getFullYear() === t.getFullYear() ? undefined : 'numeric' });
+};
+// "Pricing · Pricing page" says the same thing twice, so the page name is skipped when it matches.
+const PAGE_NAME = { homepage: 'Homepage', pricing: 'Pricing page', product: 'Product page', integrations: 'Integrations page', docs: 'Docs', changelog: 'Changelog' };
+const SAME = { pricing: 'Pricing', integrations: 'Integration', docs: 'Docs' };
+const pageName = (e) => (SAME[e.pageType] === e.category ? '' : PAGE_NAME[e.pageType] ?? 'Page');
+const initials = (name = '') => name.trim()[0]?.toUpperCase() ?? '?';
+
 function renderFeed() {
   const list = filtered();
+  const minorHidden = state.minor ? 0 : data.events.filter((e) => e.significance === 'low').length;
+  $('#feed-summary').textContent = `${list.length} change${list.length === 1 ? '' : 's'}${minorHidden ? ` · ${minorHidden} minor edits hidden` : ''}`;
   if (!list.length) {
     $('#feed').innerHTML = `<div class="empty"><p class="t-row-title">No changes match.</p><p class="t-body" style="margin:8px auto 0">${data.events.length ? 'Try widening the time range or clearing filters.' : 'Run a scan or the Wayback backfill to start the timeline.'}</p></div>`;
     return;
   }
   let html = '';
-  let month = '';
+  let day = '';
   for (const e of list.slice(0, state.limit)) {
-    const m = e.at.slice(0, 7);
-    if (m !== month) { month = m; html += `<div class="feed__month t-mono-badge">${fmtMonth(m)}</div>`; }
+    const d = dayLabel(e.at);
+    if (d !== day) { html += `${day ? '</div>' : ''}<h3 class="feed__day">${d}</h3><div class="feed__group">`; day = d; }
     html += eventCard(e);
   }
+  if (day) html += '</div>';
   if (list.length > state.limit) html += `<div class="more"><button class="btn" id="more">Show ${Math.min(60, list.length - state.limit)} more of ${list.length - state.limit}</button></div>`;
   $('#feed').innerHTML = html;
   $('#more')?.addEventListener('click', () => { state.limit += 60; renderFeed(); });
@@ -244,21 +259,21 @@ function eventCard(e) {
     e.before !== undefined ? `<div class="diff__ba"><div class="diff__line diff__line--del"><span>Before</span>${esc(e.before)}</div><div class="diff__line diff__line--add"><span>After</span>${esc(e.after)}</div></div>` :
     [...(e.added ?? []).map((t) => `<div class="diff__line diff__line--add">${esc(t)}</div>`), ...(e.removed ?? []).map((t) => `<div class="diff__line diff__line--del">${esc(t)}</div>`)].join('')
   }</div>`;
-  return `<article class="event${isNew(e) ? ' event--new' : ''}">
-    <div class="event__date">${fmtDate(e.at)}</div>
-    <div>
+  return `<article class="event event--${e.significance}${isNew(e) ? ' event--new' : ''}">
+    <span class="avatar" aria-hidden="true">${esc(initials(c?.name))}</span>
+    <div class="event__body">
       <div class="event__meta">
         <span class="event__comp">${esc(c?.name)}</span>
-        <span class="badge">${e.category}</span>
-        <span class="sig sig--${e.significance}">${e.significance}</span>
-        ${isNew(e) ? '<span class="new">New</span>' : ''}
+        <span class="dotsep">·</span><span>${e.category}</span>
+        ${pageName(e) ? `<span class="dotsep">·</span><span>${pageName(e)}</span>` : ''}
+        ${isNew(e) ? '<span class="pill pill--new">New</span>' : ''}
       </div>
-      <h3 class="event__title">${esc(e.title)}</h3>
+      <h4 class="event__title">${esc(e.title)}</h4>
       ${e.a1.length ? `<div class="a1">${e.a1.map((n) => `<span class="a1__note">${esc(n)}</span>`).join('')}</div>` : ''}
       <div class="event__foot">
-        ${hasDiff ? `<button class="linkbtn" data-toggle>Show diff</button>` : ''}
-        <a href="${esc(e.url)}" target="_blank" rel="noopener">${PAGE_LABEL[e.pageType] ?? 'Page'} ↗</a>
-        ${versionLink('before', `Before (${fmtDate(e.prevAt)})`)}
+        ${hasDiff ? `<button class="linkbtn" data-toggle>What changed</button>` : ''}
+        <a href="${esc(e.url)}" target="_blank" rel="noopener">Live page ↗</a>
+        ${versionLink('before', `Before`)}
         ${versionLink('after', 'After')}
       </div>
       ${diff}
@@ -270,7 +285,7 @@ $('#feed').addEventListener('click', (ev) => {
   const b = ev.target.closest('[data-toggle]'); if (!b) return;
   const d = b.closest('.event').querySelector('.diff');
   d.hidden = !d.hidden;
-  b.textContent = d.hidden ? 'Show diff' : 'Hide diff';
+  b.textContent = d.hidden ? 'What changed' : 'Hide details';
 });
 
 /* ---------- competitors ---------- */

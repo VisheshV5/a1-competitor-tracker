@@ -32,12 +32,13 @@ export function build() {
       if (c.isSelf) continue;
       for (let i = 1; i < snaps.length; i++) {
         if (snaps[i].hash === snaps[i - 1].hash) continue;
-        for (const e of diffSnapshots(snaps[i - 1], snaps[i], p)) {
+        // IDs don't depend on wording, so rephrasing titles never makes old changes look new.
+        diffSnapshots(snaps[i - 1], snaps[i], p).forEach((e, n) => {
           e.competitor = c.id;
-          e.id = crypto.createHash('sha1').update(`${c.id}|${p.id}|${e.at}|${e.title}`).digest('hex').slice(0, 10);
+          e.id = crypto.createHash('sha1').update(`${c.id}|${p.id}|${e.at}|${e.category}|${n}`).digest('hex').slice(0, 10);
           e.a1 = relevance(e, selfCaps);
           events.push(e);
-        }
+        });
       }
     }
     const asArr = Object.fromEntries(Object.entries(facts).map(([k, v]) => [k, [...v].sort()]));

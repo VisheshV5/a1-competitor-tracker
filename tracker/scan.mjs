@@ -36,5 +36,7 @@ await pool(jobs, 4, async ({ c, p }) => {
 writeJSON(path.join(DATA, 'status.json'), status);
 const { events, list } = build();
 const fresh = list.filter((e) => !knownIds.has(e.id));
-if (fresh.length) await alert(fresh);
+// Dozens of "new" events at once means the diff rules changed and history was re-scored,
+// not that competitors all moved in the last few minutes, so don't alert on it.
+if (fresh.length && fresh.length <= 25) await alert(fresh);
 console.log(`\n${jobs.length} pages checked, ${changed} new versions, ${fresh.length} new change events (${events} total).`);
