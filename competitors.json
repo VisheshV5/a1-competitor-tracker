@@ -1,0 +1,154 @@
+{
+  "self": {
+    "id": "a1mobile",
+    "name": "a1mobile",
+    "url": "https://www.a1mobile.com/",
+    "startingPrice": "$99/mo",
+    "pages": [
+      { "id": "home", "type": "homepage", "url": "https://www.a1mobile.com/" }
+    ],
+    "capabilities": [
+      "24/7 answering", "Bookings & reservations", "Takeout & ordering", "Quotes & estimates",
+      "Text / SMS", "Call summaries", "Call recording", "Message taking",
+      "Number porting", "Local numbers", "eSIM", "Landline support", "Carrier / phone line",
+      "Unlimited minutes"
+    ]
+  },
+  "groups": {
+    "carrier": "AI-native phone systems",
+    "hospitality": "Restaurant & hospitality AI",
+    "smb": "SMB AI receptionists"
+  },
+  "competitors": [
+    {
+      "id": "hostie", "name": "Hostie", "group": "hospitality", "url": "https://hostie.ai/",
+      "focus": "Restaurant voice + text concierge; reservations, FAQs, 20+ languages",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://hostie.ai/" },
+        { "id": "pricing", "type": "pricing", "url": "https://hostie.ai/pricing" },
+        { "id": "features", "type": "product", "url": "https://hostie.ai/features" }
+      ]
+    },
+    {
+      "id": "slang", "name": "Slang AI", "group": "hospitality", "url": "https://www.slang.ai/",
+      "focus": "\"AI Superhost\" for restaurants; reservation-platform integrations, enterprise groups",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://www.slang.ai/" },
+        { "id": "pricing", "type": "pricing", "url": "https://www.slang.ai/pricing" },
+        { "id": "product", "type": "product", "url": "https://www.slang.ai/product" },
+        { "id": "integrations", "type": "integrations", "url": "https://www.slang.ai/integrations" }
+      ]
+    },
+    {
+      "id": "loman", "name": "Loman AI", "group": "hospitality", "url": "https://loman.ai/",
+      "focus": "24/7 restaurant phone answering with POS ordering (Toast, Square, Clover…)",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://loman.ai/" },
+        { "id": "pricing", "type": "pricing", "url": "https://loman.ai/pricing" }
+      ]
+    },
+    {
+      "id": "maple", "name": "Maple", "group": "hospitality", "url": "https://maple.inc/",
+      "focus": "Voice AI that answers calls and takes orders for restaurants",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://maple.inc/" },
+        { "id": "pricing", "type": "pricing", "url": "https://maple.inc/pricing" },
+        { "id": "product", "type": "product", "url": "https://maple.inc/product" },
+        { "id": "integrations", "type": "integrations", "url": "https://maple.inc/integrations" },
+        { "id": "docs", "type": "docs", "url": "https://docs.maple.inc/" }
+      ]
+    },
+    {
+      "id": "voiceplug", "name": "VOICEplug", "group": "hospitality", "url": "https://voiceplug.ai/",
+      "focus": "Voice AI food ordering for restaurant chains (phone + drive-thru)",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://voiceplug.ai/" }
+      ]
+    },
+    {
+      "id": "quo", "name": "Quo (OpenPhone)", "group": "carrier", "url": "https://www.quo.com/",
+      "focus": "Business phone system for SMBs with bundled Sona AI agent",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://www.quo.com/" },
+        { "id": "pricing", "type": "pricing", "url": "https://www.quo.com/pricing" },
+        { "id": "sona", "type": "product", "url": "https://www.quo.com/sona" },
+        { "id": "integrations", "type": "integrations", "url": "https://www.quo.com/integrations" }
+      ]
+    },
+    {
+      "id": "allo", "name": "Allo", "group": "carrier", "url": "https://www.withallo.com/",
+      "focus": "Business phone system with AI agents, IVR, routing, post-call actions",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://www.withallo.com/" },
+        { "id": "pricing", "type": "pricing", "url": "https://www.withallo.com/pricing" },
+        { "id": "receptionist", "type": "product", "url": "https://www.withallo.com/product/ai-receptionist" },
+        { "id": "integrations", "type": "integrations", "url": "https://www.withallo.com/integrations" },
+        { "id": "changelog", "type": "changelog", "url": "https://www.withallo.com/changelog" }
+      ]
+    },
+    {
+      "id": "beside", "name": "Beside", "group": "carrier", "url": "https://www.beside.com/",
+      "focus": "\"AI operating system\" for local business: phone line + AI receptionist",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://www.beside.com/" },
+        { "id": "pricing", "type": "pricing", "url": "https://www.beside.com/phone/pricing" },
+        { "id": "integrations", "type": "integrations", "url": "https://www.beside.com/integrations" }
+      ]
+    },
+    {
+      "id": "goodcall", "name": "Goodcall", "group": "smb", "url": "https://www.goodcall.com/",
+      "focus": "AI phone agent for SMBs; unlimited minutes, priced by unique callers",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://www.goodcall.com/" },
+        { "id": "pricing", "type": "pricing", "url": "https://www.goodcall.com/pricing" }
+      ]
+    },
+    {
+      "id": "rosie", "name": "Rosie", "group": "smb", "url": "https://heyrosie.com/",
+      "focus": "AI call answering for trades and home services, from $49/mo",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://heyrosie.com/" },
+        { "id": "pricing", "type": "pricing", "url": "https://heyrosie.com/pricing" }
+      ]
+    },
+    {
+      "id": "frontdesk", "name": "Frontdesk AI", "group": "smb", "url": "https://www.myaifrontdesk.com/",
+      "focus": "AI receptionist + texting + CRM workflows (My AI Front Desk)",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://www.myaifrontdesk.com/" },
+        { "id": "pricing", "type": "pricing", "url": "https://www.myaifrontdesk.com/pricing" },
+        { "id": "features", "type": "product", "url": "https://www.myaifrontdesk.com/features" }
+      ]
+    },
+    {
+      "id": "smith", "name": "Smith.ai", "group": "smb", "url": "https://smith.ai/",
+      "focus": "Hybrid AI + live human receptionists, intake and payments",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://smith.ai/" },
+        { "id": "pricing", "type": "pricing", "url": "https://smith.ai/pricing/receptionists" },
+        { "id": "ai", "type": "product", "url": "https://smith.ai/ai-receptionist" },
+        { "id": "integrations", "type": "integrations", "url": "https://smith.ai/integrations" }
+      ]
+    },
+    {
+      "id": "upfirst", "name": "Upfirst", "group": "smb", "url": "https://upfirst.ai/",
+      "focus": "AI answering service with public changelog, docs and MCP server",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://upfirst.ai/" },
+        { "id": "pricing", "type": "pricing", "url": "https://upfirst.ai/pricing" },
+        { "id": "features", "type": "product", "url": "https://upfirst.ai/features" },
+        { "id": "integrations", "type": "integrations", "url": "https://upfirst.ai/integrations" },
+        { "id": "changelog", "type": "changelog", "url": "https://upfirst.ai/changelog" },
+        { "id": "docs", "type": "docs", "url": "https://upfirst.ai/docs" }
+      ]
+    },
+    {
+      "id": "newo", "name": "Newo", "group": "smb", "url": "https://newo.ai/",
+      "focus": "Ready-to-deploy voice AI receptionists across verticals",
+      "pages": [
+        { "id": "home", "type": "homepage", "url": "https://newo.ai/" },
+        { "id": "pricing", "type": "pricing", "url": "https://newo.ai/pricing" }
+      ]
+    }
+  ]
+}

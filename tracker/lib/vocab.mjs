@@ -1,0 +1,88 @@
+// Keyword dictionaries used to turn page copy into structured, comparable facts.
+// Add entries here as the market evolves — names are what shows up in the dashboard.
+
+const w = (s) => new RegExp(`\\b(?:${s})\\b`, 'i');
+
+export const INTEGRATIONS = {
+  OpenTable: w('open ?table'), Resy: w('resy'), Tock: w('tock'), SevenRooms: w('seven ?rooms'), Yelp: w('yelp'),
+  Toast: w('toast(?: pos)?(?= |,|\\.|$)'), Square: w('square(?: pos| for restaurants| appointments)?(?=[ ,.]|$)(?! feet| foot| footage)'),
+  Clover: w('clover'), Olo: w('olo'), SpotOn: w('spoton'), Shift4: w('shift4'), 'NCR Aloha': w('ncr|aloha pos|ncr aloha'),
+  Lightspeed: w('lightspeed'), Revel: w('revel systems|revel pos'), ChowNow: w('chownow'), DoorDash: w('doordash'),
+  'Uber Eats': w('uber ?eats'), 'Google Calendar': w('google calendar'), Outlook: w('outlook|microsoft 365|office 365'),
+  Calendly: w('calendly'), Acuity: w('acuity'), Mindbody: w('mindbody'), Vagaro: w('vagaro'), Boulevard: w('boulevard'),
+  Fresha: w('fresha'), Booksy: w('booksy'), GlossGenius: w('glossgenius'), Jobber: w('jobber'),
+  'Housecall Pro': w('housecall ?pro'), ServiceTitan: w('servicetitan|service titan'), HubSpot: w('hubspot'),
+  Salesforce: w('salesforce'), Zapier: w('zapier'), Make: w('make\\.com'), Slack: w('slack'), Clio: w('clio'),
+  HighLevel: w('go ?high ?level|highlevel'), Pipedrive: w('pipedrive'), Zoho: w('zoho'), Stripe: w('stripe'),
+  Shopify: w('shopify'), Cloudbeds: w('cloudbeds'), Mews: w('mews'), 'Oracle Opera': w('opera pms|oracle hospitality'),
+  WhatsApp: w('whatsapp'), 'Microsoft Teams': w('microsoft teams'), Gmail: w('gmail'),
+  'Google Business Profile': w('google business profile|google my business'), ChatGPT: w('chatgpt'),
+  Claude: w('claude'), Zendesk: w('zendesk'), Intercom: w('intercom'), Attio: w('attio'), Gong: w('gong'),
+  Notion: w('notion'), Airtable: w('airtable'), QuickBooks: w('quickbooks'), 'Google Sheets': w('google sheets'),
+};
+
+export const INDUSTRIES = {
+  Restaurants: w('restaurants?|dining|diners?'), Cafes: w('caf[eé]s?|coffee shops?'), Bars: w('bars|nightlife|breweries'),
+  Catering: w('catering'), Salons: w('salons?|barbers?(?:hops?)?'), Spas: w('spas?|med ?spas?|wellness'),
+  Dental: w('dental|dentists?|orthodont\\w*'), Medical: w('medical|clinics?|healthcare|patients?|chiropract\\w*'),
+  Veterinary: w('veterinar\\w*|vets?|animal hospitals?'), Legal: w('law firms?|lawyers?|attorneys?|legal'),
+  'Real estate': w('real estate|realtors?|brokerages?'), 'Property mgmt': w('property management|landlords?'),
+  'Home services': w('home services?|hvac|plumb\\w*|roof\\w*|electricians?|contractors?|landscap\\w*|pest control|cleaning services?'),
+  Automotive: w('auto(?:motive)? (?:repair|shops?|dealers?\\w*)|car dealers?\\w*|dealerships?'),
+  Hotels: w('hotels?|hospitality|resorts?|vacation rentals?|short-term rentals?'),
+  Fitness: w('fitness|gyms?|yoga|pilates|studios?'), Insurance: w('insurance'), Accounting: w('accounting|cpas?|bookkeep\\w*'),
+  Retail: w('retail|e-?commerce|stores?'), Franchises: w('franchis\\w*|multi-location|multi-unit'),
+  Enterprise: w('enterprise'),
+};
+
+export const CAPABILITIES = {
+  '24/7 answering': w('24/7|24 / 7|around the clock|after[- ]hours'),
+  'Bookings & reservations': w('reservations?|bookings?|book appointments?|appointment (?:booking|scheduling)|schedul(?:e|es|ing) appointments?'),
+  Waitlist: w('wait ?list'),
+  'Takeout & ordering': w('take ?out orders?|takes? orders?|phone orders?|online ordering|order taking|pickup orders?'),
+  'Quotes & estimates': w('quotes?|estimates?'),
+  Payments: w('take payments?|collect payments?|payment collection|accept payments?|pay(?:ment)? links?'),
+  'Text / SMS': w('sms|texts?|texting|text messages?'),
+  'Call transfer': w('(?:warm |live |call )transfers?|transfer(?:s)? (?:calls?|to (?:a|your) (?:human|team|staff))'),
+  'Live human agents': w('live (?:human )?agents?|human receptionists?|real people|human backup|live receptionists?'),
+  'Call summaries': w('call summar\\w*|summar(?:y|ies) of (?:every|each) call'),
+  'Call recording': w('call recordings?|recorded calls?|recordings? and transcripts?'),
+  Transcripts: w('transcripts?|transcriptions?'),
+  'Message taking': w('take messages?|takes messages?|message taking|voicemails?'),
+  Multilingual: w('multilingual|multi-lingual|bilingual|\\d+\\+? languages'),
+  'Custom / cloned voice': w('voice clon\\w*|clone your voice|custom voices?|your own voice'),
+  'Outbound calls': w('outbound (?:calls?|calling|campaigns?)|call(?:s)? back (?:leads|customers)'),
+  'Web chat widget': w('web ?chat|chat widget|website chat|live chat'),
+  'Email follow-up': w('email follow[- ]?ups?|sends? emails?'),
+  'CRM / contacts': w('crm|contact management'),
+  Analytics: w('analytics|insights dashboard|reporting'),
+  'IVR / phone tree': w('ivr|phone tree|call menu'),
+  'Call routing': w('call routing|route calls?|routing rules|simultaneous ring|ring groups?'),
+  'Spam blocking': w('spam (?:calls?|blocking|filter\\w*)|robocalls?|scam calls?'),
+  'Lead qualification': w('lead (?:qualification|screening|capture|intake)|qualif(?:y|ies) leads?|intake'),
+  'Appointment reminders': w('reminders?'),
+  'Review requests': w('review requests?|google reviews?|request reviews?'),
+  Upselling: w('upsell\\w*|cross-sell\\w*'),
+  'Gift cards': w('gift cards?'),
+  'Private events': w('private (?:events?|dining|parties)|large parties|group bookings?'),
+  'Public API': w('api|webhooks?|developer docs'),
+  'MCP server': w('mcp|model context protocol'),
+  'HIPAA': w('hipaa'),
+  'SOC 2': w('soc ?2'),
+  'Number porting': w('port (?:your )?(?:existing )?number|number porting|keep your (?:existing |current )?number|bring your (?:own )?number'),
+  'Local numbers': w('local (?:phone )?numbers?|area code'),
+  'Toll-free numbers': w('toll[- ]free'),
+  eSIM: w('esim'),
+  'Landline support': w('landlines?|desk phones?'),
+  'Carrier / phone line': w('carrier|phone system|business phone (?:line|number|system)|voip'),
+  'Mobile app': w('mobile app|ios app|android app|app store|google play'),
+  'Shared inbox / team': w('shared (?:inbox|number)|team(?:mates)? (?:inbox|collaboration)'),
+  'Unlimited minutes': w('unlimited (?:minutes|calls|calling)'),
+  'Free trial': w('free trial|try (?:it )?free|\\d+[- ]day trial'),
+};
+
+export const LANGUAGES = {
+  Spanish: w('spanish|español'), French: w('french|français'), Chinese: w('chinese|mandarin|cantonese'),
+  Portuguese: w('portuguese'), German: w('german'), Italian: w('italian'), Korean: w('korean'),
+  Japanese: w('japanese'), Vietnamese: w('vietnamese'), Arabic: w('arabic'), Hindi: w('hindi'),
+};

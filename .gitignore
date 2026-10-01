@@ -1,0 +1,6 @@
+node_modules/
+data/cache/
+data/*.log
+data/link-check.json
+_site/
+.DS_Store

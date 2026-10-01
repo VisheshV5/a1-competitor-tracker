@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Competitor Tracker — a1mobile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announce">
+    <p class="announce__text"><span class="announce__dot"></span><span id="announce">Loading…</span></p>
+  </div>
+
+  <header class="hero">
+    <nav class="nav">
+      <span class="nav__wordmark">a1mobile</span>
+      <span class="nav__sep">/</span>
+      <span class="nav__product">Competitor Tracker</span>
+      <div class="nav__links" role="tablist">
+        <button class="nav__link is-active" data-tab="changes" role="tab">Changes</button>
+        <button class="nav__link" data-tab="competitors" role="tab">Competitors</button>
+        <button class="nav__link" data-tab="matrix" role="tab">Feature matrix</button>
+        <button class="nav__link" data-tab="sources" role="tab">Sources</button>
+      </div>
+      <button class="btn btn--light" id="scan-btn" title="Fetch every tracked page now">Scan now</button>
+    </nav>
+    <div class="hero__body">
+      <p class="t-mono-badge hero__eyebrow">Internal · Competitive intelligence</p>
+      <p class="live" id="live"></p>
+      <h1 class="t-hero">What the competition shipped.</h1>
+      <p class="t-hero-subline">Pricing, features, integrations and positioning across AI phone platforms — diffed from their public sites, so you see what changed, when, and who moved.</p>
+      <div class="kpis" id="kpis"></div>
+    </div>
+  </header>
+
+  <main class="lane">
+    <!-- CHANGES -->
+    <section class="tab is-active" id="tab-changes">
+      <div class="section-head">
+        <div>
+          <p class="t-mono-badge">01 · Timeline</p>
+          <h2 class="t-title-2">Every meaningful change.</h2>
+        </div>
+      </div>
+
+      <div class="card heat-card">
+        <div class="heat-card__head">
+          <h3 class="t-card-title">Activity by month</h3>
+          <p class="t-mono-caption">Change events per competitor · click a cell to filter</p>
+        </div>
+        <div class="heat" id="heat"></div>
+      </div>
+
+      <div class="filters" id="filters">
+        <input type="search" id="q" class="input" placeholder="Search changes…" aria-label="Search changes">
+        <select id="f-comp" class="input" aria-label="Competitor"></select>
+        <select id="f-range" class="input" aria-label="Time range">
+          <option value="30">Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="180">Last 6 months</option>
+          <option value="0" selected>All time</option>
+        </select>
+        <label class="toggle"><input type="checkbox" id="f-a1"> A1-relevant only</label>
+        <label class="toggle"><input type="checkbox" id="f-high"> High signal only</label>
+      </div>
+      <div class="chips" id="f-cats"></div>
+
+      <div id="feed" class="feed"></div>
+    </section>
+
+    <!-- COMPETITORS -->
+    <section class="tab" id="tab-competitors">
+      <div class="section-head">
+        <div>
+          <p class="t-mono-badge">02 · Landscape</p>
+          <h2 class="t-title-2">Who we're up against.</h2>
+          <p class="t-body muted">Grouped by how they go to market. Prices are the lowest monthly figure on their public pages.</p>
+        </div>
+      </div>
+      <div id="competitors"></div>
+    </section>
+
+    <!-- MATRIX -->
+    <section class="tab" id="tab-matrix">
+      <div class="section-head">
+        <div>
+          <p class="t-mono-badge">03 · Feature matrix</p>
+          <h2 class="t-title-2">What they say they do — vs. a1mobile.</h2>
+          <p class="t-body muted">Detected from each competitor's current public copy. Rows a1mobile lacks are flagged as gaps and sorted by how many competitors claim them.</p>
+        </div>
+      </div>
+      <div class="chips" id="m-kind"></div>
+      <div class="card matrix-card"><div class="matrix-scroll" id="matrix"></div></div>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="tab" id="tab-sources">
+      <div class="section-head">
+        <div>
+          <p class="t-mono-badge">04 · Sources</p>
+          <h2 class="t-title-2">Pages we monitor.</h2>
+          <p class="t-body muted">Add or remove pages in <code>competitors.json</code>. History before the first live scan comes from the Internet Archive.</p>
+        </div>
+      </div>
+      <div class="card matrix-card"><div class="matrix-scroll" id="sources"></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="lane footer__inner">
+      <span class="nav__wordmark">a1mobile</span>
+      <span class="t-mono-caption" id="generated"></span>
+    </div>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

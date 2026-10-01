@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Keeps the tracker + live watcher running on this Mac, restarting it if it ever exits.
+     Install:   cp deploy/com.a1mobile.competitor-tracker.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.a1mobile.competitor-tracker.plist
+     Remove:    launchctl unload ~/Library/LaunchAgents/com.a1mobile.competitor-tracker.plist -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.a1mobile.competitor-tracker</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/node</string>
+    <string>/Users/visheshv/a1-competitor-dashboard/tracker/serve.mjs</string>
+    <string>4321</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/visheshv/a1-competitor-dashboard</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>WATCH_INTERVAL</key><string>120</string>
+    <key>NOTIFY</key><string>1</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>/Users/visheshv/a1-competitor-dashboard/data/watcher.log</string>
+  <key>StandardErrorPath</key><string>/Users/visheshv/a1-competitor-dashboard/data/watcher.log</string>
+</dict>
+</plist>

@@ -1,0 +1,85 @@
+# Checks every competitor page on a schedule, commits new versions to the repo, and publishes
+# the dashboard to GitHub Pages whenever something changed (and at least hourly, so
+# "last checked" stays fresh).
+name: Watch competitors
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # GitHub's minimum; runs can start late when GitHub is busy
+  workflow_dispatch:         # "Run a check" button on the dashboard
+  push:
+    branches: [main]
+    paths: ['public/**', 'tracker/**', 'competitors.json', '.github/workflows/watch.yml']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Check every page
+        if: github.event_name != 'push'
+        env:
+          TRACKER_HOSTING: github
+          TRACKER_CHECK_EVERY_MIN: 5
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+        run: node tracker/scan.mjs
+
+      - name: Rebuild data
+        if: github.event_name == 'push'
+        env:
+          TRACKER_HOSTING: github
+          TRACKER_CHECK_EVERY_MIN: 5
+        run: node tracker/build.mjs
+
+      - name: Decide whether to publish
+        id: decide
+        run: |
+          if [ -n "$(git status --porcelain data/snapshots)" ]; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+          # Publish when content changed, on manual runs/pushes, and on the first run of each hour.
+          if [ -n "$(git status --porcelain data/snapshots)" ] || [ "${{ github.event_name }}" != "schedule" ] || [ "$(date -u +%M)" -lt 5 ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit new versions
+        if: steps.decide.outputs.publish == 'true'
+        run: |
+          git config user.name "competitor-tracker[bot]"
+          git config user.email "competitor-tracker@users.noreply.github.com"
+          git add data/snapshots data/status.json public/data.json dashboard.html
+          if git diff --cached --quiet; then exit 0; fi
+          msg="Scan $(date -u +'%Y-%m-%d %H:%M UTC')"
+          [ "${{ steps.decide.outputs.changed }}" = "true" ] && msg="Competitor changes detected — $(git diff --cached --name-only data/snapshots | cut -d/ -f3 | sort -u | paste -sd, -)"
+          git commit -m "$msg"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
+
+      - name: Build site
+        if: steps.decide.outputs.publish == 'true'
+        run: node tracker/site.mjs _site
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.decide.outputs.publish == 'true'
+        with:
+          path: _site
+
+      - id: deploy
+        if: steps.decide.outputs.publish == 'true'
+        uses: actions/deploy-pages@v4

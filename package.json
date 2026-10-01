@@ -1,0 +1,15 @@
+{
+  "name": "a1-competitor-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tracks product, pricing and positioning changes across AI phone competitors of a1mobile.",
+  "scripts": {
+    "scan": "node tracker/scan.mjs",
+    "backfill": "node tracker/backfill.mjs 12",
+    "build": "node tracker/build.mjs",
+    "serve": "node tracker/serve.mjs",
+    "check-links": "node tracker/check-links.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

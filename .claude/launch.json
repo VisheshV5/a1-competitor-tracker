@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "tracker", "runtimeExecutable": "node", "runtimeArgs": ["tracker/serve.mjs", "4321"], "port": 4321 }
+  ]
+}
