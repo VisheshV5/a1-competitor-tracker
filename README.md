@@ -34,7 +34,6 @@ npm run serve        # dashboard + live watcher at http://localhost:4321
 npm run scan         # one-off check of every page
 npm run backfill     # pull 12 months of history from the Internet Archive (one-time)
 npm run build        # recompute all change events from stored snapshots
-npm run check-links  # verify every Internet Archive link on the dashboard opens the right capture
 ```
 
 ## Real-time monitoring

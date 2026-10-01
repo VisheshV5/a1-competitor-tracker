@@ -75,3 +75,25 @@ jobs:
       - id: deploy
         if: steps.decide.outputs.publish == 'true'
         uses: actions/deploy-pages@v4
+
+      # Load every page a visitor can click from the live site; a failure fails the run,
+      # and GitHub emails the repo owner.
+      - name: Verify every link on the live site
+        if: steps.decide.outputs.publish == 'true'
+        env:
+          SITE: ${{ steps.deploy.outputs.page_url }}
+        run: |
+          sleep 20
+          bad=0
+          for path in "" data.json styles.css app.js links.js $(cat _site/links.txt); do
+            code=000
+            for attempt in 1 2 3 4 5; do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "${SITE%/}/$path")
+              [ "$code" = 200 ] && break
+              sleep 10
+            done
+            [ "$code" = 200 ] || { echo "::error::$code ${SITE%/}/$path"; bad=$((bad+1)); }
+          done
+          total=$(( $(wc -l < _site/links.txt) + 5 ))
+          echo "$((total-bad))/$total pages load"
+          [ "$bad" -eq 0 ]

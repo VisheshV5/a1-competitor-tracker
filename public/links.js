@@ -1,15 +1,6 @@
-// Archive links shown on each change card. Shared by the dashboard and the link checker so
-// what gets tested is exactly what gets rendered.
-const stamp = (iso) => iso.replace(/[-:T]/g, '').slice(0, 14);
-
-// Internet Archive links exist only for versions that came from it; versions we captured
-// ourselves aren't in the archive under that timestamp.
-export function archiveLinks(e) {
-  const out = [];
-  if (e.prevSource === 'wayback') out.push({ kind: 'before', ts: stamp(e.prevAt), href: `https://web.archive.org/web/${stamp(e.prevAt)}/${e.url}` });
-  if (e.source === 'wayback') out.push({ kind: 'after', ts: stamp(e.at), href: `https://web.archive.org/web/${stamp(e.at)}/${e.url}` });
-  return out;
-}
+// Where a change card's Before/After links point. Shared by the dashboard and the site
+// builder so the pages that get published are exactly the ones that get linked.
+export const stamp = (iso) => iso.replace(/[-:T]/g, '').slice(0, 14);
 
 // Served by tracker/serve.mjs locally, or pre-rendered as .html files on GitHub Pages.
 export const localSnapshotHref = (e, which, isStatic = false) =>

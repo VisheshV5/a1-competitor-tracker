@@ -8,8 +8,7 @@
     "scan": "node tracker/scan.mjs",
     "backfill": "node tracker/backfill.mjs 12",
     "build": "node tracker/build.mjs",
-    "serve": "node tracker/serve.mjs",
-    "check-links": "node tracker/check-links.mjs"
+    "serve": "node tracker/serve.mjs"
   },
   "engines": { "node": ">=20" }
 }
