@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-10-01T18:29:22.626Z",
- "hosting": "local",
- "checkEveryMin": 2,
- "repoUrl": null,
+ "generatedAt": "2026-10-01T18:29:39.781Z",
+ "hosting": "github",
+ "checkEveryMin": 5,
+ "repoUrl": "https://github.com/VisheshV5/a1-competitor-tracker",
  "groups": {
   "carrier": "AI-native phone systems",
   "hospitality": "Restaurant & hospitality AI",
@@ -78,10 +78,10 @@
      "versions": 1,
      "firstSeen": "2026-10-01T17:23:01.457Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:08.703Z",
+     "lastChecked": "2026-10-01T18:29:36.530Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:08.703Z",
+      "checkedAt": "2026-10-01T18:29:36.530Z",
       "blocks": 94,
       "changed": false
      }
@@ -131,10 +131,10 @@
      "versions": 9,
      "firstSeen": "2025-10-15T06:05:54.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:08.970Z",
+     "lastChecked": "2026-10-01T18:29:36.574Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:08.970Z",
+      "checkedAt": "2026-10-01T18:29:36.574Z",
       "blocks": 68,
       "changed": false
      }
@@ -146,10 +146,10 @@
      "versions": 6,
      "firstSeen": "2025-10-12T10:40:19.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:08.973Z",
+     "lastChecked": "2026-10-01T18:29:36.576Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:08.973Z",
+      "checkedAt": "2026-10-01T18:29:36.576Z",
       "blocks": 92,
       "changed": false
      }
@@ -161,10 +161,10 @@
      "versions": 6,
      "firstSeen": "2025-10-12T10:59:58.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:08.974Z",
+     "lastChecked": "2026-10-01T18:29:36.578Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:08.974Z",
+      "checkedAt": "2026-10-01T18:29:36.578Z",
       "blocks": 74,
       "changed": false
      }
@@ -233,10 +233,10 @@
      "versions": 10,
      "firstSeen": "2025-10-06T04:52:44.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.489Z",
+     "lastChecked": "2026-10-01T18:29:36.694Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.489Z",
+      "checkedAt": "2026-10-01T18:29:36.694Z",
       "blocks": 101,
       "changed": false
      }
@@ -248,10 +248,10 @@
      "versions": 7,
      "firstSeen": "2025-10-06T03:33:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.494Z",
+     "lastChecked": "2026-10-01T18:29:36.704Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.494Z",
+      "checkedAt": "2026-10-01T18:29:36.704Z",
       "blocks": 167,
       "changed": false
      }
@@ -263,10 +263,10 @@
      "versions": 8,
      "firstSeen": "2025-10-05T20:32:52.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.498Z",
+     "lastChecked": "2026-10-01T18:29:36.774Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.498Z",
+      "checkedAt": "2026-10-01T18:29:36.774Z",
       "blocks": 57,
       "changed": false
      }
@@ -278,10 +278,10 @@
      "versions": 3,
      "firstSeen": "2026-04-21T06:32:34.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.507Z",
+     "lastChecked": "2026-10-01T18:29:36.783Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.507Z",
+      "checkedAt": "2026-10-01T18:29:36.783Z",
       "blocks": 16,
       "changed": false
      }
@@ -351,10 +351,10 @@
      "versions": 7,
      "firstSeen": "2025-10-10T15:50:29.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.787Z",
+     "lastChecked": "2026-10-01T18:29:36.791Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.787Z",
+      "checkedAt": "2026-10-01T18:29:36.791Z",
       "blocks": 115,
       "changed": false
      }
@@ -366,10 +366,10 @@
      "versions": 7,
      "firstSeen": "2025-10-18T19:45:46.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.792Z",
+     "lastChecked": "2026-10-01T18:29:36.805Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.792Z",
+      "checkedAt": "2026-10-01T18:29:36.805Z",
       "blocks": 50,
       "changed": false
      }
@@ -448,10 +448,10 @@
      "versions": 8,
      "firstSeen": "2025-11-15T07:30:13.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.799Z",
+     "lastChecked": "2026-10-01T18:29:36.810Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.799Z",
+      "checkedAt": "2026-10-01T18:29:36.810Z",
       "blocks": 101,
       "changed": false
      }
@@ -463,10 +463,10 @@
      "versions": 3,
      "firstSeen": "2025-12-20T09:53:58.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.881Z",
+     "lastChecked": "2026-10-01T18:29:36.837Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.881Z",
+      "checkedAt": "2026-10-01T18:29:36.837Z",
       "blocks": 69,
       "changed": false
      }
@@ -478,10 +478,10 @@
      "versions": 3,
      "firstSeen": "2025-12-24T09:11:59.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.891Z",
+     "lastChecked": "2026-10-01T18:29:36.865Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.891Z",
+      "checkedAt": "2026-10-01T18:29:36.865Z",
       "blocks": 61,
       "changed": false
      }
@@ -493,10 +493,10 @@
      "versions": 3,
      "firstSeen": "2025-12-20T08:27:32.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.910Z",
+     "lastChecked": "2026-10-01T18:29:36.873Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.910Z",
+      "checkedAt": "2026-10-01T18:29:36.873Z",
       "blocks": 71,
       "changed": false
      }
@@ -508,10 +508,10 @@
      "versions": 4,
      "firstSeen": "2025-12-19T08:24:44.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.970Z",
+     "lastChecked": "2026-10-01T18:29:36.926Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.970Z",
+      "checkedAt": "2026-10-01T18:29:36.926Z",
       "blocks": 46,
       "changed": false
      }
@@ -570,10 +570,10 @@
      "versions": 8,
      "firstSeen": "2025-10-16T08:58:34.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.977Z",
+     "lastChecked": "2026-10-01T18:29:36.933Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.977Z",
+      "checkedAt": "2026-10-01T18:29:36.933Z",
       "blocks": 247,
       "changed": false
      }
@@ -675,10 +675,10 @@
      "versions": 12,
      "firstSeen": "2025-10-16T04:09:05.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:09.983Z",
+     "lastChecked": "2026-10-01T18:29:36.944Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:09.983Z",
+      "checkedAt": "2026-10-01T18:29:36.944Z",
       "blocks": 110,
       "changed": false
      }
@@ -690,10 +690,10 @@
      "versions": 13,
      "firstSeen": "2025-10-29T09:01:28.000Z",
      "lastChanged": "2026-10-01T18:14:29.340Z",
-     "lastChecked": "2026-10-01T18:21:10.042Z",
+     "lastChecked": "2026-10-01T18:29:36.991Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.042Z",
+      "checkedAt": "2026-10-01T18:29:36.991Z",
       "blocks": 278,
       "changed": false
      }
@@ -705,10 +705,10 @@
      "versions": 12,
      "firstSeen": "2025-10-26T06:39:44.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.202Z",
+     "lastChecked": "2026-10-01T18:29:36.999Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.202Z",
+      "checkedAt": "2026-10-01T18:29:36.999Z",
       "blocks": 138,
       "changed": false
      }
@@ -720,10 +720,10 @@
      "versions": 9,
      "firstSeen": "2025-10-29T05:48:07.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.297Z",
+     "lastChecked": "2026-10-01T18:29:37.086Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.297Z",
+      "checkedAt": "2026-10-01T18:29:37.086Z",
       "blocks": 126,
       "changed": false
      }
@@ -838,10 +838,10 @@
      "versions": 12,
      "firstSeen": "2025-10-14T07:43:36.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.319Z",
+     "lastChecked": "2026-10-01T18:29:37.113Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.319Z",
+      "checkedAt": "2026-10-01T18:29:37.113Z",
       "blocks": 176,
       "changed": false
      }
@@ -853,10 +853,10 @@
      "versions": 8,
      "firstSeen": "2025-11-16T04:16:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.375Z",
+     "lastChecked": "2026-10-01T18:29:37.154Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.375Z",
+      "checkedAt": "2026-10-01T18:29:37.154Z",
       "blocks": 156,
       "changed": false
      }
@@ -868,10 +868,10 @@
      "versions": 2,
      "firstSeen": "2026-08-25T21:54:12.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.390Z",
+     "lastChecked": "2026-10-01T18:29:37.193Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.390Z",
+      "checkedAt": "2026-10-01T18:29:37.193Z",
       "blocks": 165,
       "changed": false
      }
@@ -883,10 +883,10 @@
      "versions": 7,
      "firstSeen": "2025-10-03T14:06:39.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.400Z",
+     "lastChecked": "2026-10-01T18:29:37.211Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.400Z",
+      "checkedAt": "2026-10-01T18:29:37.211Z",
       "blocks": 127,
       "changed": false
      }
@@ -898,10 +898,10 @@
      "versions": 5,
      "firstSeen": "2026-01-26T18:39:33.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.663Z",
+     "lastChecked": "2026-10-01T18:29:37.393Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.663Z",
+      "checkedAt": "2026-10-01T18:29:37.393Z",
       "blocks": 334,
       "changed": false
      }
@@ -1018,10 +1018,10 @@
      "versions": 9,
      "firstSeen": "2025-11-15T09:24:13.000Z",
      "lastChanged": "2026-10-01T18:14:30.544Z",
-     "lastChecked": "2026-10-01T18:21:10.715Z",
+     "lastChecked": "2026-10-01T18:29:37.427Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.715Z",
+      "checkedAt": "2026-10-01T18:29:37.427Z",
       "blocks": 233,
       "changed": false
      }
@@ -1033,10 +1033,10 @@
      "versions": 2,
      "firstSeen": "2026-09-29T16:01:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.727Z",
+     "lastChecked": "2026-10-01T18:29:37.440Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.727Z",
+      "checkedAt": "2026-10-01T18:29:37.440Z",
       "blocks": 190,
       "changed": false
      }
@@ -1048,10 +1048,10 @@
      "versions": 7,
      "firstSeen": "2025-11-15T15:54:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.898Z",
+     "lastChecked": "2026-10-01T18:29:37.448Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.898Z",
+      "checkedAt": "2026-10-01T18:29:37.448Z",
       "blocks": 68,
       "changed": false
      }
@@ -1127,10 +1127,10 @@
      "versions": 7,
      "firstSeen": "2025-10-27T19:14:09.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:10.928Z",
+     "lastChecked": "2026-10-01T18:29:37.500Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:10.928Z",
+      "checkedAt": "2026-10-01T18:29:37.500Z",
       "blocks": 113,
       "changed": false
      }
@@ -1142,10 +1142,10 @@
      "versions": 7,
      "firstSeen": "2025-10-10T06:17:42.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.072Z",
+     "lastChecked": "2026-10-01T18:29:37.569Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.072Z",
+      "checkedAt": "2026-10-01T18:29:37.569Z",
       "blocks": 106,
       "changed": false
      }
@@ -1223,10 +1223,10 @@
      "versions": 10,
      "firstSeen": "2025-10-07T22:27:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.103Z",
+     "lastChecked": "2026-10-01T18:29:37.574Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.103Z",
+      "checkedAt": "2026-10-01T18:29:37.574Z",
       "blocks": 258,
       "changed": false
      }
@@ -1238,10 +1238,10 @@
      "versions": 7,
      "firstSeen": "2025-10-07T21:08:57.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.108Z",
+     "lastChecked": "2026-10-01T18:29:37.599Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.108Z",
+      "checkedAt": "2026-10-01T18:29:37.599Z",
       "blocks": 143,
       "changed": false
      }
@@ -1363,10 +1363,10 @@
      "versions": 13,
      "firstSeen": "2025-10-14T13:39:38.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.140Z",
+     "lastChecked": "2026-10-01T18:29:37.671Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.140Z",
+      "checkedAt": "2026-10-01T18:29:37.671Z",
       "blocks": 282,
       "changed": false
      }
@@ -1378,10 +1378,10 @@
      "versions": 7,
      "firstSeen": "2025-10-11T08:04:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.224Z",
+     "lastChecked": "2026-10-01T18:29:37.700Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.224Z",
+      "checkedAt": "2026-10-01T18:29:37.700Z",
       "blocks": 274,
       "changed": false
      }
@@ -1393,10 +1393,10 @@
      "versions": 6,
      "firstSeen": "2025-12-09T19:38:13.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.307Z",
+     "lastChecked": "2026-10-01T18:29:37.810Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.307Z",
+      "checkedAt": "2026-10-01T18:29:37.810Z",
       "blocks": 155,
       "changed": false
      }
@@ -1516,10 +1516,10 @@
      "versions": 9,
      "firstSeen": "2025-10-31T14:17:48.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.319Z",
+     "lastChecked": "2026-10-01T18:29:37.829Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.319Z",
+      "checkedAt": "2026-10-01T18:29:37.829Z",
       "blocks": 208,
       "changed": false
      }
@@ -1531,10 +1531,10 @@
      "versions": 8,
      "firstSeen": "2025-10-26T10:00:40.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.413Z",
+     "lastChecked": "2026-10-01T18:29:37.875Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.413Z",
+      "checkedAt": "2026-10-01T18:29:37.875Z",
       "blocks": 115,
       "changed": false
      }
@@ -1546,10 +1546,10 @@
      "versions": 8,
      "firstSeen": "2025-10-15T04:40:53.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.477Z",
+     "lastChecked": "2026-10-01T18:29:37.884Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.477Z",
+      "checkedAt": "2026-10-01T18:29:37.884Z",
       "blocks": 172,
       "changed": false
      }
@@ -1561,10 +1561,10 @@
      "versions": 6,
      "firstSeen": "2025-12-25T09:01:16.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.510Z",
+     "lastChecked": "2026-10-01T18:29:37.921Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.510Z",
+      "checkedAt": "2026-10-01T18:29:37.921Z",
       "blocks": 86,
       "changed": false
      }
@@ -1673,10 +1673,10 @@
      "versions": 8,
      "firstSeen": "2025-10-19T20:56:16.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.558Z",
+     "lastChecked": "2026-10-01T18:29:37.939Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.558Z",
+      "checkedAt": "2026-10-01T18:29:37.939Z",
       "blocks": 162,
       "changed": false
      }
@@ -1688,10 +1688,10 @@
      "versions": 5,
      "firstSeen": "2025-11-07T06:44:30.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.577Z",
+     "lastChecked": "2026-10-01T18:29:37.947Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.577Z",
+      "checkedAt": "2026-10-01T18:29:37.947Z",
       "blocks": 69,
       "changed": false
      }
@@ -1703,10 +1703,10 @@
      "versions": 5,
      "firstSeen": "2025-10-12T18:39:52.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.632Z",
+     "lastChecked": "2026-10-01T18:29:37.993Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.632Z",
+      "checkedAt": "2026-10-01T18:29:37.993Z",
       "blocks": 33,
       "changed": false
      }
@@ -1718,10 +1718,10 @@
      "versions": 4,
      "firstSeen": "2025-10-12T17:00:49.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.685Z",
+     "lastChecked": "2026-10-01T18:29:38.024Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.685Z",
+      "checkedAt": "2026-10-01T18:29:38.024Z",
       "blocks": 16,
       "changed": false
      }
@@ -1733,10 +1733,10 @@
      "versions": 3,
      "firstSeen": "2026-03-14T02:26:21.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.697Z",
+     "lastChecked": "2026-10-01T18:29:38.029Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.697Z",
+      "checkedAt": "2026-10-01T18:29:38.029Z",
       "blocks": 312,
       "changed": false
      }
@@ -1748,10 +1748,10 @@
      "versions": 1,
      "firstSeen": "2026-10-01T17:23:01.457Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.735Z",
+     "lastChecked": "2026-10-01T18:29:38.052Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.735Z",
+      "checkedAt": "2026-10-01T18:29:38.052Z",
       "blocks": 18,
       "changed": false
      }
@@ -1820,10 +1820,10 @@
      "versions": 10,
      "firstSeen": "2025-10-17T04:26:40.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.738Z",
+     "lastChecked": "2026-10-01T18:29:38.060Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.738Z",
+      "checkedAt": "2026-10-01T18:29:38.060Z",
       "blocks": 87,
       "changed": false
      }
@@ -1835,10 +1835,10 @@
      "versions": 4,
      "firstSeen": "2025-10-10T03:04:17.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-10-01T18:21:11.780Z",
+     "lastChecked": "2026-10-01T18:29:38.092Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-10-01T18:21:11.780Z",
+      "checkedAt": "2026-10-01T18:29:38.092Z",
       "blocks": 73,
       "changed": false
      }
