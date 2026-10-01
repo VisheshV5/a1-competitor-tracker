@@ -9,7 +9,7 @@ on:
   workflow_dispatch:         # "Run a check" button on the dashboard
   push:
     branches: [main]
-    paths: ['public/**', 'tracker/**', 'competitors.json', '.github/workflows/watch.yml']
+    paths: ['public/**', 'tracker/**', 'competitors.json', 'data/snapshots/**', '.github/workflows/watch.yml']
 
 permissions:
   contents: write
@@ -35,20 +35,12 @@ jobs:
           node-version: 24
 
       - name: Check every page
-        if: github.event_name != 'push'
         env:
           TRACKER_HOSTING: github
           TRACKER_CHECK_EVERY_MIN: 5
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
         run: node tracker/scan.mjs
-
-      - name: Rebuild data
-        if: github.event_name == 'push'
-        env:
-          TRACKER_HOSTING: github
-          TRACKER_CHECK_EVERY_MIN: 5
-        run: node tracker/build.mjs
 
       - name: Decide whether to publish
         id: decide
