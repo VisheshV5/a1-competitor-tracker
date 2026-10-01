@@ -48,7 +48,18 @@ npm run check-links  # verify every Internet Archive link on the dashboard opens
 
 Worst-case latency from a competitor publishing to it showing on the dashboard is about 2½ minutes: up to one check interval plus the 20-second confirmation. Competitors don't push their changes anywhere, so polling is the limit. Lowering `WATCH_INTERVAL` shortens the delay at the cost of more requests.
 
-**Keep it always on.** The watcher only runs while `npm run serve` is running and this Mac is awake. To have macOS start it at login and restart it if it exits, use the LaunchAgent in [`deploy/`](deploy/com.a1mobile.competitor-tracker.plist); install steps are in that file. For true 24/7 coverage that survives a closed laptop, run the same command on a small always-on server or VM.
+### Hosted on GitHub (no laptop needed)
+
+[`.github/workflows/watch.yml`](.github/workflows/watch.yml) runs `tracker/scan.mjs` every 5 minutes on GitHub Actions:
+
+- New versions are committed back to the repo, so the full history lives in git.
+- The dashboard is published to GitHub Pages. Any open tab checks for new data every minute and shows the same toast and NEW badges.
+- The **Run a check** button opens the workflow so you can trigger a run by hand.
+- **Slack alerts:** add a repo secret `SLACK_WEBHOOK_URL`, and optionally a repo variable `DASHBOARD_URL` so alerts link back to the dashboard.
+
+Expected delay is 5–10 minutes. GitHub doesn't guarantee schedule timing, and runs can start 10–30 minutes late when it's busy. For true 2-minute checks, run `npm run serve` on an always-on server instead.
+
+One-time setup: push the repo, then go to **Settings → Pages → Source** and choose **GitHub Actions**.
 
 ## How it works
 
