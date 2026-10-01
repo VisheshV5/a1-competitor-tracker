@@ -76,6 +76,18 @@ function pollPages() {
       document.title = `(${freshIds.size}) Competitor Tracker — a1mobile`;
     }
   };
+  // Data is only republished when something changed, so ask GitHub when the last check finished.
+  const checkRuns = async () => {
+    if (!data.repoUrl) return;
+    const api = data.repoUrl.replace('https://github.com/', 'https://api.github.com/repos/');
+    try {
+      const r = await fetch(`${api}/actions/workflows/watch.yml/runs?per_page=1&status=completed`).then((x) => x.json());
+      live.lastCheckAt = r.workflow_runs?.[0]?.updated_at ?? live.lastCheckAt;
+    } catch {}
+    renderLive();
+  };
+  checkRuns();
+  setInterval(checkRuns, 120000);
   renderLive();
   setInterval(tick, 60000);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
@@ -85,8 +97,8 @@ function renderLive() {
   const el = $('#live');
   if (!el) return;
   if (PAGES) {
-    const mins = Math.max(0, Math.round((Date.now() - new Date(data.generatedAt)) / 60000));
-    el.innerHTML = `<span class="live__dot"></span>Auto-updating · every page checked every ~${data.checkEveryMin} min · data published ${mins < 1 ? 'just now' : `${mins} min ago`}`;
+    const ago = (iso) => { const m = Math.max(0, Math.round((Date.now() - new Date(iso)) / 60000)); return m < 1 ? 'just now' : `${m} min ago`; };
+    el.innerHTML = `<span class="live__dot"></span>Live · every page checked every ~${data.checkEveryMin} min · ${live.lastCheckAt ? `last check ${ago(live.lastCheckAt)}` : `updated ${ago(data.generatedAt)}`}`;
     return;
   }
   if (!LIVE || !live.pages) { el.innerHTML = ''; return; }

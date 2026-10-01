@@ -1,17 +1,20 @@
-# Checks every competitor page on a schedule, commits new versions to the repo, and publishes
-# the dashboard to GitHub Pages whenever something changed (and at least hourly, so
-# "last checked" stays fresh).
+# Checks every competitor page, commits new versions to the repo, and publishes the dashboard
+# to GitHub Pages whenever something changed (and at least hourly).
+#
+# GitHub runs cron schedules late or skips them on quiet repos, so each run queues the next
+# one itself a few minutes after finishing. The cron below only restarts the chain if it breaks.
 name: Watch competitors
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # GitHub's minimum; runs can start late when GitHub is busy
+    - cron: '*/5 * * * *'   # backup only; see the "Queue the next check" step
   workflow_dispatch:         # "Run a check" button on the dashboard
   push:
     branches: [main]
     paths: ['public/**', 'tracker/**', 'competitors.json', 'data/snapshots/**', '.github/workflows/watch.yml']
 
 permissions:
+  actions: write
   contents: write
   pages: write
   id-token: write
@@ -97,3 +100,20 @@ jobs:
           total=$(( $(wc -l < _site/links.txt) + 5 ))
           echo "$((total-bad))/$total pages load"
           [ "$bad" -eq 0 ]
+
+      # Runs even if an earlier step failed, so one bad run never stops the monitoring.
+      # workflow_dispatch is the one event GITHUB_TOKEN is allowed to trigger.
+      - name: Queue the next check
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 150
+          others=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow watch.yml --limit 20 --json databaseId,status \
+            --jq "[.[] | select(.databaseId != $GITHUB_RUN_ID and (.status == \"queued\" or .status == \"in_progress\" or .status == \"pending\" or .status == \"waiting\"))] | length")
+          if [ "$others" -eq 0 ]; then
+            gh workflow run watch.yml --repo "$GITHUB_REPOSITORY" --ref main
+            echo "Queued the next check."
+          else
+            echo "Another check is already queued; not adding one."
+          fi
