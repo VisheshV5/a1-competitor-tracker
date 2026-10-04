@@ -1,283 +1,283 @@
 {
  "hostie/features": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:52.865Z",
+  "checkedAt": "2026-10-04T16:25:33.660Z",
   "blocks": 74,
   "changed": false
  },
  "a1mobile/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:52.737Z",
+  "checkedAt": "2026-10-04T16:25:33.463Z",
   "blocks": 94,
   "changed": false
  },
  "hostie/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:52.849Z",
+  "checkedAt": "2026-10-04T16:25:33.641Z",
   "blocks": 68,
   "changed": false
  },
  "slang/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.090Z",
+  "checkedAt": "2026-10-04T16:25:33.873Z",
   "blocks": 167,
   "changed": false
  },
  "hostie/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:52.851Z",
+  "checkedAt": "2026-10-04T16:25:33.643Z",
   "blocks": 92,
   "changed": false
  },
  "slang/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.083Z",
+  "checkedAt": "2026-10-04T16:25:33.864Z",
   "blocks": 101,
   "changed": false
  },
  "slang/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.108Z",
+  "checkedAt": "2026-10-04T16:25:33.903Z",
   "blocks": 16,
   "changed": false
  },
  "slang/product": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.099Z",
+  "checkedAt": "2026-10-04T16:25:33.877Z",
   "blocks": 57,
   "changed": false
  },
  "loman/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.250Z",
+  "checkedAt": "2026-10-04T16:25:33.998Z",
   "blocks": 50,
   "changed": false
  },
  "loman/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.235Z",
+  "checkedAt": "2026-10-04T16:25:33.992Z",
   "blocks": 115,
   "changed": false
  },
  "maple/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.467Z",
+  "checkedAt": "2026-10-04T16:25:34.013Z",
   "blocks": 68,
   "changed": false
  },
  "maple/product": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.492Z",
+  "checkedAt": "2026-10-04T16:25:34.087Z",
   "blocks": 60,
   "changed": false
  },
  "maple/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.499Z",
+  "checkedAt": "2026-10-04T16:25:34.094Z",
   "blocks": 70,
   "changed": false
  },
  "maple/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.462Z",
+  "checkedAt": "2026-10-04T16:25:34.005Z",
   "blocks": 100,
   "changed": false
  },
  "voiceplug/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.600Z",
+  "checkedAt": "2026-10-04T16:25:34.171Z",
   "blocks": 247,
   "changed": false
  },
  "quo/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.629Z",
+  "checkedAt": "2026-10-04T16:25:34.181Z",
   "blocks": 278,
   "changed": false
  },
  "quo/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.613Z",
+  "checkedAt": "2026-10-04T16:25:34.176Z",
   "blocks": 110,
   "changed": false
  },
  "quo/sona": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.743Z",
+  "checkedAt": "2026-10-04T16:25:34.307Z",
   "blocks": 138,
   "changed": false
  },
  "maple/docs": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.579Z",
+  "checkedAt": "2026-10-04T16:25:34.141Z",
   "blocks": 46,
   "changed": false
  },
  "quo/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.822Z",
+  "checkedAt": "2026-10-04T16:25:34.316Z",
   "blocks": 126,
   "changed": false
  },
  "allo/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.834Z",
+  "checkedAt": "2026-10-04T16:25:34.373Z",
   "blocks": 176,
   "changed": false
  },
  "allo/receptionist": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.938Z",
+  "checkedAt": "2026-10-04T16:25:34.418Z",
   "blocks": 165,
   "changed": false
  },
  "allo/changelog": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.101Z",
+  "checkedAt": "2026-10-04T16:25:34.624Z",
   "blocks": 334,
   "changed": false
  },
  "allo/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.009Z",
+  "checkedAt": "2026-10-04T16:25:34.455Z",
   "blocks": 127,
   "changed": false
  },
  "beside/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.217Z",
+  "checkedAt": "2026-10-04T16:25:34.834Z",
   "blocks": 190,
   "changed": false
  },
  "beside/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.194Z",
+  "checkedAt": "2026-10-04T16:25:34.722Z",
   "blocks": 239,
   "changed": false
  },
  "beside/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.231Z",
+  "checkedAt": "2026-10-04T16:25:34.913Z",
   "blocks": 68,
   "changed": false
  },
  "goodcall/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.385Z",
+  "checkedAt": "2026-10-04T16:25:34.949Z",
   "blocks": 113,
   "changed": false
  },
  "goodcall/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.544Z",
+  "checkedAt": "2026-10-04T16:25:34.962Z",
   "blocks": 106,
   "changed": false
  },
  "allo/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:53.843Z",
+  "checkedAt": "2026-10-04T16:25:34.380Z",
   "blocks": 156,
   "changed": false
  },
  "rosie/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.807Z",
+  "checkedAt": "2026-10-04T16:25:35.071Z",
   "blocks": 143,
   "changed": false
  },
  "frontdesk/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.883Z",
+  "checkedAt": "2026-10-04T16:25:35.130Z",
   "blocks": 282,
   "changed": false
  },
  "frontdesk/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.034Z",
+  "checkedAt": "2026-10-04T16:25:35.293Z",
   "blocks": 274,
   "changed": false
  },
  "rosie/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:54.597Z",
+  "checkedAt": "2026-10-04T16:25:35.061Z",
   "blocks": 258,
   "changed": false
  },
  "smith/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.180Z",
+  "checkedAt": "2026-10-04T16:25:35.437Z",
   "blocks": 208,
   "changed": false
  },
  "smith/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.430Z",
+  "checkedAt": "2026-10-04T16:25:37.780Z",
   "blocks": 86,
   "changed": false
  },
  "smith/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.281Z",
+  "checkedAt": "2026-10-04T16:25:37.659Z",
   "blocks": 115,
   "changed": false
  },
  "smith/ai": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.422Z",
+  "checkedAt": "2026-10-04T16:25:37.688Z",
   "blocks": 172,
   "changed": false
  },
  "upfirst/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.482Z",
+  "checkedAt": "2026-10-04T16:25:37.794Z",
   "blocks": 69,
   "changed": false
  },
  "upfirst/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.457Z",
+  "checkedAt": "2026-10-04T16:25:37.787Z",
   "blocks": 162,
   "changed": false
  },
  "upfirst/features": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.557Z",
+  "checkedAt": "2026-10-04T16:25:37.810Z",
   "blocks": 33,
   "changed": false
  },
  "upfirst/integrations": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.566Z",
+  "checkedAt": "2026-10-04T16:25:37.894Z",
   "blocks": 16,
   "changed": false
  },
  "upfirst/changelog": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.573Z",
+  "checkedAt": "2026-10-04T16:25:37.902Z",
   "blocks": 312,
   "changed": false
  },
  "upfirst/docs": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.601Z",
+  "checkedAt": "2026-10-04T16:25:37.906Z",
   "blocks": 18,
   "changed": false
  },
  "newo/home": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.648Z",
+  "checkedAt": "2026-10-04T16:25:37.912Z",
   "blocks": 87,
   "changed": false
  },
  "newo/pricing": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.654Z",
+  "checkedAt": "2026-10-04T16:25:37.940Z",
   "blocks": 73,
   "changed": false
  },
  "frontdesk/features": {
   "ok": true,
-  "checkedAt": "2026-10-04T16:20:55.088Z",
+  "checkedAt": "2026-10-04T16:25:35.308Z",
   "blocks": 155,
   "changed": false
  }
