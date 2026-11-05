@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-05T23:08:33.618Z",
+ "generatedAt": "2026-11-05T23:13:25.865Z",
  "hosting": "github",
  "checkEveryMin": 5,
  "repoUrl": "https://github.com/VisheshV5/a1-competitor-tracker",
@@ -78,10 +78,10 @@
      "versions": 2,
      "firstSeen": "2026-10-01T17:23:01.457Z",
      "lastChanged": "2026-11-04T13:33:43.305Z",
-     "lastChecked": "2026-11-05T23:08:30.231Z",
+     "lastChecked": "2026-11-05T23:13:03.464Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.231Z",
+      "checkedAt": "2026-11-05T23:13:03.464Z",
       "blocks": 90,
       "changed": false
      }
@@ -131,10 +131,10 @@
      "versions": 25,
      "firstSeen": "2025-10-15T06:05:54.000Z",
      "lastChanged": "2026-11-05T21:43:44.406Z",
-     "lastChecked": "2026-11-05T23:08:30.258Z",
+     "lastChecked": "2026-11-05T23:13:03.576Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.258Z",
+      "checkedAt": "2026-11-05T23:13:03.576Z",
       "blocks": 67,
       "changed": false
      }
@@ -146,10 +146,10 @@
      "versions": 313,
      "firstSeen": "2025-10-12T10:40:19.000Z",
      "lastChanged": "2026-11-05T21:43:44.345Z",
-     "lastChecked": "2026-11-05T23:08:30.263Z",
+     "lastChecked": "2026-11-05T23:13:03.578Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.263Z",
+      "checkedAt": "2026-11-05T23:13:03.578Z",
       "blocks": 92,
       "changed": false
      }
@@ -161,10 +161,10 @@
      "versions": 7,
      "firstSeen": "2025-10-12T10:59:58.000Z",
      "lastChanged": "2026-11-04T13:33:43.285Z",
-     "lastChecked": "2026-11-05T23:08:30.273Z",
+     "lastChecked": "2026-11-05T23:13:03.587Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.273Z",
+      "checkedAt": "2026-11-05T23:13:03.587Z",
       "blocks": 74,
       "changed": false
      }
@@ -233,10 +233,10 @@
      "versions": 11,
      "firstSeen": "2025-10-06T04:52:44.000Z",
      "lastChanged": "2026-10-05T10:58:30.917Z",
-     "lastChecked": "2026-11-05T23:08:30.437Z",
+     "lastChecked": "2026-11-05T23:13:03.842Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.437Z",
+      "checkedAt": "2026-11-05T23:13:03.842Z",
       "blocks": 69,
       "changed": false
      }
@@ -248,10 +248,10 @@
      "versions": 9,
      "firstSeen": "2025-10-06T03:33:47.000Z",
      "lastChanged": "2026-11-04T13:34:03.764Z",
-     "lastChecked": "2026-11-05T23:08:30.459Z",
+     "lastChecked": "2026-11-05T23:13:03.854Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.459Z",
+      "checkedAt": "2026-11-05T23:13:03.854Z",
       "blocks": 164,
       "changed": false
      }
@@ -263,10 +263,10 @@
      "versions": 10,
      "firstSeen": "2025-10-05T20:32:52.000Z",
      "lastChanged": "2026-11-04T13:34:03.750Z",
-     "lastChecked": "2026-11-05T23:08:30.462Z",
+     "lastChecked": "2026-11-05T23:13:03.858Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.462Z",
+      "checkedAt": "2026-11-05T23:13:03.858Z",
       "blocks": 52,
       "changed": false
      }
@@ -278,10 +278,10 @@
      "versions": 3,
      "firstSeen": "2026-04-21T06:32:34.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:30.516Z",
+     "lastChecked": "2026-11-05T23:13:03.919Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.516Z",
+      "checkedAt": "2026-11-05T23:13:03.919Z",
       "blocks": 16,
       "changed": false
      }
@@ -330,6 +330,7 @@
      "Call transfer",
      "Local numbers",
      "Message taking",
+     "Multilingual",
      "Payments",
      "Quotes & estimates",
      "Takeout & ordering",
@@ -339,7 +340,8 @@
     ],
     "languages": [
      "Chinese",
-     "Italian"
+     "Italian",
+     "Spanish"
     ]
    },
    "pages": [
@@ -347,15 +349,15 @@
      "id": "home",
      "type": "homepage",
      "url": "https://loman.ai/",
-     "versions": 9,
+     "versions": 10,
      "firstSeen": "2025-10-10T15:50:29.000Z",
-     "lastChanged": "2026-10-02T16:44:33.989Z",
-     "lastChecked": "2026-11-05T23:08:30.614Z",
+     "lastChanged": "2026-11-05T23:13:24.840Z",
+     "lastChecked": "2026-11-05T23:13:04.125Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.614Z",
-      "blocks": 115,
-      "changed": false
+      "checkedAt": "2026-11-05T23:13:04.125Z",
+      "blocks": 118,
+      "changed": true
      }
     },
     {
@@ -365,10 +367,10 @@
      "versions": 8,
      "firstSeen": "2025-10-18T19:45:46.000Z",
      "lastChanged": "2026-10-02T16:44:33.854Z",
-     "lastChecked": "2026-11-05T23:08:30.622Z",
+     "lastChecked": "2026-11-05T23:13:04.131Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.622Z",
+      "checkedAt": "2026-11-05T23:13:04.131Z",
       "blocks": 50,
       "changed": false
      }
@@ -377,6 +379,7 @@
    "gaps": [
     "Analytics",
     "Call transfer",
+    "Multilingual",
     "Payments",
     "Transcripts",
     "Upselling"
@@ -447,10 +450,10 @@
      "versions": 22,
      "firstSeen": "2025-11-15T07:30:13.000Z",
      "lastChanged": "2026-11-05T22:36:59.416Z",
-     "lastChecked": "2026-11-05T23:08:30.626Z",
+     "lastChecked": "2026-11-05T23:13:04.135Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.626Z",
+      "checkedAt": "2026-11-05T23:13:04.135Z",
       "blocks": 99,
       "changed": false
      }
@@ -462,10 +465,10 @@
      "versions": 5,
      "firstSeen": "2025-12-20T09:53:58.000Z",
      "lastChanged": "2026-11-04T13:34:03.904Z",
-     "lastChecked": "2026-11-05T23:08:30.656Z",
+     "lastChecked": "2026-11-05T23:13:04.142Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.656Z",
+      "checkedAt": "2026-11-05T23:13:04.142Z",
       "blocks": 68,
       "changed": false
      }
@@ -477,10 +480,10 @@
      "versions": 5,
      "firstSeen": "2025-12-24T09:11:59.000Z",
      "lastChanged": "2026-11-04T13:34:23.910Z",
-     "lastChecked": "2026-11-05T23:08:30.748Z",
+     "lastChecked": "2026-11-05T23:13:04.324Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.748Z",
+      "checkedAt": "2026-11-05T23:13:04.324Z",
       "blocks": 60,
       "changed": false
      }
@@ -492,10 +495,10 @@
      "versions": 5,
      "firstSeen": "2025-12-20T08:27:32.000Z",
      "lastChanged": "2026-11-04T13:34:23.904Z",
-     "lastChecked": "2026-11-05T23:08:30.759Z",
+     "lastChecked": "2026-11-05T23:13:04.361Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.759Z",
+      "checkedAt": "2026-11-05T23:13:04.361Z",
       "blocks": 70,
       "changed": false
      }
@@ -507,10 +510,10 @@
      "versions": 5,
      "firstSeen": "2025-12-19T08:24:44.000Z",
      "lastChanged": "2026-11-04T13:34:24.241Z",
-     "lastChecked": "2026-11-05T23:08:30.814Z",
+     "lastChecked": "2026-11-05T23:13:04.375Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.814Z",
+      "checkedAt": "2026-11-05T23:13:04.375Z",
       "blocks": 51,
       "changed": false
      }
@@ -569,10 +572,10 @@
      "versions": 10,
      "firstSeen": "2025-10-16T08:58:34.000Z",
      "lastChanged": "2026-11-04T13:34:23.991Z",
-     "lastChecked": "2026-11-05T23:08:30.820Z",
+     "lastChecked": "2026-11-05T23:13:04.440Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.820Z",
+      "checkedAt": "2026-11-05T23:13:04.440Z",
       "blocks": 242,
       "changed": false
      }
@@ -674,10 +677,10 @@
      "versions": 15,
      "firstSeen": "2025-10-16T04:09:05.000Z",
      "lastChanged": "2026-11-05T04:07:38.419Z",
-     "lastChecked": "2026-11-05T23:08:30.832Z",
+     "lastChecked": "2026-11-05T23:13:04.474Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.832Z",
+      "checkedAt": "2026-11-05T23:13:04.474Z",
       "blocks": 116,
       "changed": false
      }
@@ -689,10 +692,10 @@
      "versions": 14,
      "firstSeen": "2025-10-29T09:01:28.000Z",
      "lastChanged": "2026-11-04T13:34:44.118Z",
-     "lastChecked": "2026-11-05T23:08:30.853Z",
+     "lastChecked": "2026-11-05T23:13:04.644Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:30.853Z",
+      "checkedAt": "2026-11-05T23:13:04.644Z",
       "blocks": 281,
       "changed": false
      }
@@ -704,10 +707,10 @@
      "versions": 12,
      "firstSeen": "2025-10-26T06:39:44.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:31.020Z",
+     "lastChecked": "2026-11-05T23:13:04.714Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.020Z",
+      "checkedAt": "2026-11-05T23:13:04.714Z",
       "blocks": 138,
       "changed": false
      }
@@ -719,10 +722,10 @@
      "versions": 11,
      "firstSeen": "2025-10-29T05:48:07.000Z",
      "lastChanged": "2026-11-05T14:05:11.490Z",
-     "lastChecked": "2026-11-05T23:08:31.032Z",
+     "lastChecked": "2026-11-05T23:13:04.720Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.032Z",
+      "checkedAt": "2026-11-05T23:13:04.720Z",
       "blocks": 128,
       "changed": false
      }
@@ -837,10 +840,10 @@
      "versions": 14,
      "firstSeen": "2025-10-14T07:43:36.000Z",
      "lastChanged": "2026-11-04T13:34:44.698Z",
-     "lastChecked": "2026-11-05T23:08:31.081Z",
+     "lastChecked": "2026-11-05T23:13:04.741Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.081Z",
+      "checkedAt": "2026-11-05T23:13:04.741Z",
       "blocks": 171,
       "changed": false
      }
@@ -852,10 +855,10 @@
      "versions": 21,
      "firstSeen": "2025-11-16T04:16:47.000Z",
      "lastChanged": "2026-11-05T15:09:05.209Z",
-     "lastChecked": "2026-11-05T23:08:31.093Z",
+     "lastChecked": "2026-11-05T23:13:04.788Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.093Z",
+      "checkedAt": "2026-11-05T23:13:04.788Z",
       "blocks": 157,
       "changed": false
      }
@@ -867,10 +870,10 @@
      "versions": 3,
      "firstSeen": "2026-08-25T21:54:12.000Z",
      "lastChanged": "2026-11-04T13:35:04.765Z",
-     "lastChecked": "2026-11-05T23:08:31.107Z",
+     "lastChecked": "2026-11-05T23:13:04.833Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.107Z",
+      "checkedAt": "2026-11-05T23:13:04.833Z",
       "blocks": 180,
       "changed": false
      }
@@ -882,10 +885,10 @@
      "versions": 9,
      "firstSeen": "2025-10-03T14:06:39.000Z",
      "lastChanged": "2026-11-04T15:33:29.491Z",
-     "lastChecked": "2026-11-05T23:08:31.140Z",
+     "lastChecked": "2026-11-05T23:13:04.964Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.140Z",
+      "checkedAt": "2026-11-05T23:13:04.964Z",
       "blocks": 136,
       "changed": false
      }
@@ -897,10 +900,10 @@
      "versions": 6,
      "firstSeen": "2026-01-26T18:39:33.000Z",
      "lastChanged": "2026-11-04T13:35:05.125Z",
-     "lastChecked": "2026-11-05T23:08:31.411Z",
+     "lastChecked": "2026-11-05T23:13:05.046Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.411Z",
+      "checkedAt": "2026-11-05T23:13:05.046Z",
       "blocks": 392,
       "changed": false
      }
@@ -1016,10 +1019,10 @@
      "versions": 65,
      "firstSeen": "2025-11-15T09:24:13.000Z",
      "lastChanged": "2026-11-05T19:50:58.890Z",
-     "lastChecked": "2026-11-05T23:08:31.419Z",
+     "lastChecked": "2026-11-05T23:13:05.121Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.419Z",
+      "checkedAt": "2026-11-05T23:13:05.121Z",
       "blocks": 241,
       "changed": false
      }
@@ -1031,10 +1034,10 @@
      "versions": 3,
      "firstSeen": "2026-09-29T16:01:47.000Z",
      "lastChanged": "2026-11-04T13:35:24.945Z",
-     "lastChecked": "2026-11-05T23:08:31.441Z",
+     "lastChecked": "2026-11-05T23:13:05.186Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.441Z",
+      "checkedAt": "2026-11-05T23:13:05.186Z",
       "blocks": 190,
       "changed": false
      }
@@ -1046,10 +1049,10 @@
      "versions": 8,
      "firstSeen": "2025-11-15T15:54:47.000Z",
      "lastChanged": "2026-11-04T13:35:25.023Z",
-     "lastChecked": "2026-11-05T23:08:31.546Z",
+     "lastChecked": "2026-11-05T23:13:05.263Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.546Z",
+      "checkedAt": "2026-11-05T23:13:05.263Z",
       "blocks": 68,
       "changed": false
      }
@@ -1133,10 +1136,10 @@
      "versions": 8,
      "firstSeen": "2025-10-27T19:14:09.000Z",
      "lastChanged": "2026-11-04T13:35:25.998Z",
-     "lastChecked": "2026-11-05T23:08:31.694Z",
+     "lastChecked": "2026-11-05T23:13:05.520Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.694Z",
+      "checkedAt": "2026-11-05T23:13:05.520Z",
       "blocks": 187,
       "changed": false
      }
@@ -1148,10 +1151,10 @@
      "versions": 8,
      "firstSeen": "2025-10-10T06:17:42.000Z",
      "lastChanged": "2026-11-04T13:35:45.289Z",
-     "lastChecked": "2026-11-05T23:08:31.714Z",
+     "lastChecked": "2026-11-05T23:13:05.580Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.714Z",
+      "checkedAt": "2026-11-05T23:13:05.580Z",
       "blocks": 62,
       "changed": false
      }
@@ -1230,10 +1233,10 @@
      "versions": 10,
      "firstSeen": "2025-10-07T22:27:47.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:31.756Z",
+     "lastChecked": "2026-11-05T23:13:05.587Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:31.756Z",
+      "checkedAt": "2026-11-05T23:13:05.587Z",
       "blocks": 258,
       "changed": false
      }
@@ -1245,10 +1248,10 @@
      "versions": 7,
      "firstSeen": "2025-10-07T21:08:57.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:32.081Z",
+     "lastChecked": "2026-11-05T23:13:05.813Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.081Z",
+      "checkedAt": "2026-11-05T23:13:05.813Z",
       "blocks": 143,
       "changed": false
      }
@@ -1372,10 +1375,10 @@
      "versions": 14,
      "firstSeen": "2025-10-14T13:39:38.000Z",
      "lastChanged": "2026-11-04T13:35:45.489Z",
-     "lastChecked": "2026-11-05T23:08:32.094Z",
+     "lastChecked": "2026-11-05T23:13:05.911Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.094Z",
+      "checkedAt": "2026-11-05T23:13:05.911Z",
       "blocks": 283,
       "changed": false
      }
@@ -1387,10 +1390,10 @@
      "versions": 8,
      "firstSeen": "2025-10-11T08:04:47.000Z",
      "lastChanged": "2026-11-04T13:35:45.480Z",
-     "lastChecked": "2026-11-05T23:08:32.107Z",
+     "lastChecked": "2026-11-05T23:13:05.917Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.107Z",
+      "checkedAt": "2026-11-05T23:13:05.917Z",
       "blocks": 280,
       "changed": false
      }
@@ -1402,10 +1405,10 @@
      "versions": 7,
      "firstSeen": "2025-12-09T19:38:13.000Z",
      "lastChanged": "2026-11-04T13:35:46.339Z",
-     "lastChecked": "2026-11-05T23:08:32.122Z",
+     "lastChecked": "2026-11-05T23:13:06.010Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.122Z",
+      "checkedAt": "2026-11-05T23:13:06.010Z",
       "blocks": 156,
       "changed": false
      }
@@ -1527,10 +1530,10 @@
      "versions": 10,
      "firstSeen": "2025-10-31T14:17:48.000Z",
      "lastChanged": "2026-11-04T13:36:05.441Z",
-     "lastChecked": "2026-11-05T23:08:32.240Z",
+     "lastChecked": "2026-11-05T23:13:06.344Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.240Z",
+      "checkedAt": "2026-11-05T23:13:06.344Z",
       "blocks": 216,
       "changed": false
      }
@@ -1542,10 +1545,10 @@
      "versions": 9,
      "firstSeen": "2025-10-26T10:00:40.000Z",
      "lastChanged": "2026-11-04T13:36:05.542Z",
-     "lastChecked": "2026-11-05T23:08:32.375Z",
+     "lastChecked": "2026-11-05T23:13:06.351Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.375Z",
+      "checkedAt": "2026-11-05T23:13:06.351Z",
       "blocks": 114,
       "changed": false
      }
@@ -1557,10 +1560,10 @@
      "versions": 9,
      "firstSeen": "2025-10-15T04:40:53.000Z",
      "lastChanged": "2026-11-04T13:36:05.636Z",
-     "lastChecked": "2026-11-05T23:08:32.400Z",
+     "lastChecked": "2026-11-05T23:13:06.483Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.400Z",
+      "checkedAt": "2026-11-05T23:13:06.483Z",
       "blocks": 170,
       "changed": false
      }
@@ -1572,10 +1575,10 @@
      "versions": 7,
      "firstSeen": "2025-12-25T09:01:16.000Z",
      "lastChanged": "2026-11-04T13:36:06.393Z",
-     "lastChecked": "2026-11-05T23:08:32.407Z",
+     "lastChecked": "2026-11-05T23:13:06.557Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.407Z",
+      "checkedAt": "2026-11-05T23:13:06.557Z",
       "blocks": 85,
       "changed": false
      }
@@ -1683,10 +1686,10 @@
      "versions": 9,
      "firstSeen": "2025-10-19T20:56:16.000Z",
      "lastChanged": "2026-11-04T13:36:25.720Z",
-     "lastChecked": "2026-11-05T23:08:32.417Z",
+     "lastChecked": "2026-11-05T23:13:06.562Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.417Z",
+      "checkedAt": "2026-11-05T23:13:06.562Z",
       "blocks": 165,
       "changed": false
      }
@@ -1698,10 +1701,10 @@
      "versions": 7,
      "firstSeen": "2025-11-07T06:44:30.000Z",
      "lastChanged": "2026-11-05T13:59:41.541Z",
-     "lastChecked": "2026-11-05T23:08:32.488Z",
+     "lastChecked": "2026-11-05T23:13:06.578Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.488Z",
+      "checkedAt": "2026-11-05T23:13:06.578Z",
       "blocks": 142,
       "changed": false
      }
@@ -1713,10 +1716,10 @@
      "versions": 5,
      "firstSeen": "2025-10-12T18:39:52.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:32.497Z",
+     "lastChecked": "2026-11-05T23:13:06.588Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.497Z",
+      "checkedAt": "2026-11-05T23:13:06.588Z",
       "blocks": 33,
       "changed": false
      }
@@ -1728,10 +1731,10 @@
      "versions": 4,
      "firstSeen": "2025-10-12T17:00:49.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:32.538Z",
+     "lastChecked": "2026-11-05T23:13:06.700Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.538Z",
+      "checkedAt": "2026-11-05T23:13:06.700Z",
       "blocks": 16,
       "changed": false
      }
@@ -1743,10 +1746,10 @@
      "versions": 4,
      "firstSeen": "2026-03-14T02:26:21.000Z",
      "lastChanged": "2026-11-04T13:36:25.842Z",
-     "lastChecked": "2026-11-05T23:08:32.579Z",
+     "lastChecked": "2026-11-05T23:13:06.734Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.579Z",
+      "checkedAt": "2026-11-05T23:13:06.734Z",
       "blocks": 320,
       "changed": false
      }
@@ -1758,10 +1761,10 @@
      "versions": 1,
      "firstSeen": "2026-10-01T17:23:01.457Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:32.602Z",
+     "lastChecked": "2026-11-05T23:13:06.744Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.602Z",
+      "checkedAt": "2026-11-05T23:13:06.744Z",
       "blocks": 18,
       "changed": false
      }
@@ -1831,10 +1834,10 @@
      "versions": 10,
      "firstSeen": "2025-10-17T04:26:40.000Z",
      "lastChanged": "2026-10-01T17:23:01.457Z",
-     "lastChecked": "2026-11-05T23:08:32.613Z",
+     "lastChecked": "2026-11-05T23:13:06.765Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.613Z",
+      "checkedAt": "2026-11-05T23:13:06.765Z",
       "blocks": 87,
       "changed": false
      }
@@ -1846,10 +1849,10 @@
      "versions": 5,
      "firstSeen": "2025-10-10T03:04:17.000Z",
      "lastChanged": "2026-11-04T13:36:26.782Z",
-     "lastChecked": "2026-11-05T23:08:32.621Z",
+     "lastChecked": "2026-11-05T23:13:06.801Z",
      "status": {
       "ok": true,
-      "checkedAt": "2026-11-05T23:08:32.621Z",
+      "checkedAt": "2026-11-05T23:13:06.801Z",
       "blocks": 71,
       "changed": false
      }
@@ -1868,6 +1871,66 @@
   }
  ],
  "events": [
+  {
+   "pageId": "home",
+   "pageType": "homepage",
+   "url": "https://loman.ai/",
+   "at": "2026-11-05T23:13:24.840Z",
+   "prevAt": "2026-10-02T16:44:33.989Z",
+   "source": "live",
+   "prevSource": "live",
+   "category": "Feature",
+   "significance": "high",
+   "title": "New capability mentioned: Multilingual",
+   "added": [
+    "Multilingual"
+   ],
+   "competitor": "loman",
+   "id": "217ec30aa4",
+   "a1": [
+    "a1mobile gap: Multilingual"
+   ]
+  },
+  {
+   "pageId": "home",
+   "pageType": "homepage",
+   "url": "https://loman.ai/",
+   "at": "2026-11-05T23:13:24.840Z",
+   "prevAt": "2026-10-02T16:44:33.989Z",
+   "source": "live",
+   "prevSource": "live",
+   "category": "Feature",
+   "significance": "medium",
+   "title": "New languages mentioned: Spanish",
+   "added": [
+    "Spanish"
+   ],
+   "competitor": "loman",
+   "id": "056946a1b0",
+   "a1": []
+  },
+  {
+   "pageId": "home",
+   "pageType": "homepage",
+   "url": "https://loman.ai/",
+   "at": "2026-11-05T23:13:24.840Z",
+   "prevAt": "2026-10-02T16:44:33.989Z",
+   "source": "live",
+   "prevSource": "live",
+   "category": "Messaging",
+   "significance": "low",
+   "title": "New on the homepage: “Multilingual phone answering”",
+   "added": [
+    "Multilingual phone answering",
+    "Loman takes restaurant orders in English and Spanish and sends the ticket to your POS in English.",
+    "Explore multilingual phone answering"
+   ],
+   "removed": [],
+   "volume": 161,
+   "competitor": "loman",
+   "id": "7c0875734f",
+   "a1": []
+  },
   {
    "pageId": "home",
    "pageType": "homepage",
